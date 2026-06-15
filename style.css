@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MASTER EXECUTIVE STYLE SHEET - ULTRA-MINIMALIST DENSE COCKPIT LAYOUT
+   MASTER EXECUTIVE STYLE SHEET - REFINED INSTITUTIONAL COCKPIT LAYOUT
    ========================================================================== */
 
 @import url('https://googleapis.com');
@@ -51,7 +51,7 @@ body {
 }
 
 .nav-links a.active, .nav-links a:hover {
-    color: #FF8C00; 
+    color: #C26112; /* Dimmed to Muted Amber Bronze Accent */
     font-weight: 600;
 }
 
@@ -61,17 +61,17 @@ body {
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 200px 1fr; /* Reduced width to match tighter left column components */
+    grid-template-columns: 200px 1fr; 
     gap: 4.5rem;
     width: 100%;
 }
 
-/* TIGHTENED: Left Column Profile Card Anchor Box */
+/* Left Column Profile Card Anchor Box */
 .cockpit-left-anchor {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligned everything left cleanly */
-    gap: 0.85rem; /* Tight, uniform vertical spacing between all elements */
+    align-items: flex-start; 
+    gap: 0.85rem; 
 }
 
 .cockpit-profile-img {
@@ -81,7 +81,6 @@ body {
     object-fit: cover;
     border: 1px solid #3d3d45;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    /* FIXED PHOTO: Dimmed brightness and contrast to seamlessly match your dark canvas */
     filter: brightness(0.65) contrast(0.85); 
     display: block;
 }
@@ -90,7 +89,7 @@ body {
 .badge-stack {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem; /* Tightened badge spacing gaps */
+    gap: 0.4rem; 
     width: 100%;
 }
 
@@ -104,10 +103,10 @@ body {
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    border: 1px solid #FF8C00; 
+    border: 1px solid #C26112; 
 }
 
-/* FIXED LEFT COLUMN TEXT: Clean Left-Aligned Philosophy Tagline Block */
+/* Left Column Text: Clean Left-Aligned Philosophy Tagline Block */
 .tagline-container-block {
     padding: 0.5rem 0 0 0.25rem;
     width: 100%;
@@ -115,12 +114,12 @@ body {
 }
 
 .tagline-text-stamp {
-    color: #FF8C00;
-    font-size: 0.75rem; /* Slightly reduced sizing font footprint */
+    color: #C26112;
+    font-size: 0.75rem; 
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    line-height: 1.45; /* Slightly reduced word spacing gaps */
+    line-height: 1.45; 
 }
 
 /* Right Main Institutional Data Sheet Section */
@@ -136,7 +135,6 @@ body {
     padding-bottom: 1.25rem;
 }
 
-/* FIXED NAME SIZE: Slightly reduced to hold perfect layout balance */
 .executive-widescreen-header h1 {
     font-size: 2.1rem;
     font-weight: 700;
@@ -145,23 +143,23 @@ body {
     margin-bottom: 0.6rem;
 }
 
-/* FIXED CONTACT INFO: High-contrast plain text row with all icons removed */
 .horizontal-contact-strip {
     font-size: 0.95rem;
-    color: #cbd5e1; /* Crisp, readable off-white standard text against the dark backdrop */
+    color: #cbd5e1; 
     font-weight: 500;
     letter-spacing: 0.3px;
     line-height: 1;
 }
 
-/* FIXED TAGLINE: Reduced main headline font size by approximately 20% for clean readability */
+/* REFINED HEADLINE: Reduced font size and forced standard non-caps casing text transform rules */
 h2.hero-pitch-title {
-    font-size: 1.45rem; 
+    font-size: 1.35rem; /* Reduced by approximately 20% */
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 0.5rem;
-    letter-spacing: -0.2px;
-    line-height: 1.3;
+    letter-spacing: -0.1px;
+    line-height: 1.4;
+    text-transform: none !important; /* Explicitly guarantees sentence case display override */
 }
 
 p.hero-sub-pitch {
@@ -197,7 +195,6 @@ h2.section-header-line {
     color: #cbd5e1;
 }
 
-/* FIXED COLUMN HEADERS: Reduced size slightly to avoid competing with main tagline */
 .summary-column-item strong {
     color: #ffffff;
     display: block;
@@ -208,7 +205,7 @@ h2.section-header-line {
     text-transform: uppercase;
 }
 
-/* FIXED STATS SECTION GRID STRUCTURE */
+/* STATS SECTION GRID STRUCTURE */
 .ledger-row-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
@@ -224,24 +221,23 @@ h2.section-header-line {
     flex-direction: column;
 }
 
-/* FIXED METRIC SIZE: Reduced number font scale by exactly 20% */
 .ledger-data-item h3 {
-    color: #FF8C00; 
+    color: #C26112; 
     font-size: 1.65rem; 
     font-weight: 700;
     margin-bottom: 0.4rem;
     font-variant-numeric: tabular-nums;
-    white-space: nowrap; /* FIXED ROW SPLIT: Forces your numbers and string identifiers to display on a single line */
+    white-space: nowrap; 
 }
 
-/* FIXED LABELS: Reduced size by 30%, lightened weight, increased line-height spacing */
+/* REFINED LABELS: Font size increased by 10%, line-height adjusted for crisp breathing room */
 .ledger-data-item p {
-    font-size: 0.6rem; 
-    font-weight: 500;   /* Muted lighter weight */
+    font-size: 0.66rem; /* Increased by exactly 10% from previous size */
+    font-weight: 500;   
     color: #94a3b8; 
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.6;   /* Enhanced padding row separation readability spacing */
+    line-height: 1.6;   
 }
 
 /* Twin Interactive Call Buttons Layout row */
@@ -250,8 +246,9 @@ h2.section-header-line {
     gap: 1.5rem;
 }
 
+/* REFINED CTA: Switched to a sophisticated, deep corporate Muted Amber Bronze */
 .btn-primary {
-    background-color: #FF8C00;
+    background-color: #C26112;
     color: #ffffff;
     padding: 0.9rem 2.2rem;
     text-decoration: none;
@@ -263,7 +260,7 @@ h2.section-header-line {
 }
 
 .btn-primary:hover {
-    background-color: #d47500;
+    background-color: #a4510d;
 }
 
 .btn-secondary {
