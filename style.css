@@ -1,6 +1,6 @@
 /* ==========================================================================
    MASTER EXECUTIVE STYLE SHEET - 2026 NEXT-GEN INSTITUTIONAL COCKPIT
-   PALETTE: CHARCOAL, FLAME, ESPRESSO, BURGUNDY, ALABASTER
+   PALETTE: CHARCOAL, NEON FLAME, CHAMBER BLACK, CRUNCH SILVA
    ========================================================================== */
 
 @import url('https://googleapis.com');
@@ -15,12 +15,12 @@
 /* Master Full-Page Dark Canvas (#2B2B2B) */
 body {
     background-color: #2B2B2B;
-    color: #F4F3EF; /* Warm Alabaster primary text */
+    color: #F4F3EF; 
     letter-spacing: -0.1px;
     min-height: 100vh;
 }
 
-/* Centered Top Menu Navigation Bar */
+/* Top Menu Navigation Bar with Centered Link Blocks */
 .navbar {
     background-color: #1A1A1D; 
     color: #ffffff;
@@ -52,17 +52,17 @@ body {
 }
 
 .nav-links a.active, .nav-links a:hover {
-    color: #D9731A; /* Flame Gold Active Accent */
+    color: #FF8C00; /* Upgraded to High-Contrast Bright Neon Flame */
     font-weight: 600;
 }
 
 /* Widescreen Dashboard Master Workspace Framework */
 .cockpit-container {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 240px 1fr; /* Distinct left anchor and long wide ledger columns */
+    grid-template-columns: 240px 1fr; 
     gap: 4.5rem;
     width: 100%;
 }
@@ -77,31 +77,55 @@ body {
 .cockpit-profile-img {
     width: 200px;
     height: 200px;
-    border-radius: 8px; /* Sharp, modern subtle rounded corner box approach */
+    border-radius: 8px; 
     object-fit: cover;
     border: 1px solid #3d3d45;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     margin-bottom: 1.5rem;
+    mix-blend-mode: luminosity; /* Blends portrait background naturally into dark canvas */
+    opacity: 0.9;
 }
 
-/* Burgundy (#5A1A24) Badges stack */
+/* Cohesive Non-Clashing Badge Stack (#1A1A1D) */
 .badge-stack {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
+    margin-bottom: 2rem;
 }
 
 .badge-tag {
-    background-color: #5A1A24;
-    color: #FFFFFF;
+    background-color: #1A1A1D;
+    color: #ffffff;
     font-size: 0.75rem;
     font-weight: 600;
-    padding: 0.45rem;
+    padding: 0.5rem;
     border-radius: 4px;
     text-align: center;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    border: 1px solid #FF8C00; /* Sleek Flame Frame boundary */
+}
+
+/* Integrated Tagline Track Container Block */
+.tagline-container-block {
+    border-left: 2px solid #36363B;
+    border-right: 2px solid #36363B;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    background-color: #242429;
+    border-radius: 4px;
+}
+
+.tagline-text-stamp {
+    color: #FF8C00;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.7;
 }
 
 /* Right Main Institutional Data Sheet Section */
@@ -129,29 +153,75 @@ body {
     display: flex;
     gap: 1.5rem;
     font-size: 0.95rem;
-    color: #D9731A; /* Styled entirely in your crisp Flame color */
+    color: #E2E8F0; /* Upgraded to high contrast Silver text */
     font-weight: 500;
     align-items: center;
+}
+
+.horizontal-contact-strip strong {
+    color: #FF8C00; /* Highlights contact data details in Flame */
 }
 
 .strip-divider {
     color: #44444a;
 }
 
-/* Narrative Document Text spacing */
-.narrative-summary-p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #cbd5e1;
-    margin-bottom: 3.5rem;
-    max-width: 850px;
+/* Headings and Core Document Typography */
+h2.hero-pitch-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
 }
 
-/* THE INSTITUTIONAL LEDGER ROW GRID - DROPPED THE HEAVY BOXES */
+p.hero-sub-pitch {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #E2E8F0;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.2px;
+    line-height: 1.5;
+}
+
+h2.section-header-line {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #3d3d45;
+    padding-bottom: 0.5rem;
+}
+
+/* Broken Up Columns for Professional Summary */
+.summary-columns-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.summary-column-item {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.summary-column-item strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+}
+
+/* THE HIGH-CONTRAST INSTITUTIONAL LEDGER ROW GRID */
 .ledger-row-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem;
     border-top: 1px solid #3d3d45;
     border-bottom: 1px solid #3d3d45;
     padding: 2.5rem 0;
@@ -161,11 +231,16 @@ body {
 .ledger-data-item {
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.ledger-data-item:hover {
+    transform: translateY(-2px); /* Premium interaction animation lift */
 }
 
 .ledger-data-item h3 {
-    color: #D9731A; /* Big figures glow in Flame Gold */
-    font-size: 2.4rem;
+    color: #FF8C00; /* High Contrast Flame numbers */
+    font-size: 2.2rem;
     font-weight: 700;
     margin-bottom: 0.4rem;
     font-variant-numeric: tabular-nums;
@@ -174,7 +249,7 @@ body {
 .ledger-data-item p {
     font-size: 0.8rem;
     font-weight: 600;
-    color: #94a3b8; /* Upper case corporate silver descriptions */
+    color: #E2E8F0; /* Upgraded to high-contrast Alabaster text */
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1.4;
@@ -187,18 +262,20 @@ body {
 }
 
 .btn-primary {
-    background-color: #D9731A;
+    background-color: #FF8C00;
     color: #ffffff;
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 .btn-primary:hover {
-    background-color: #b55d12;
+    background-color: #d47500;
+    transform: translateY(-1px);
 }
 
 .btn-secondary {
@@ -210,76 +287,17 @@ body {
     font-weight: 600;
     font-size: 0.95rem;
     border: 1px solid #44444a;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    text-align: center;
 }
 
 .btn-secondary:hover {
     background-color: #1A1A1D;
     border-color: #ffffff;
+    transform: translateY(-1px);
 }
 
-/* Shared Central Sheets for Experience / Expertise sub pages */
-.main-wrapper {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-.executive-panel {
-    width: 100%;
-    padding: 1rem 0;
-}
-
-h2 {
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1.75rem;
-    letter-spacing: -0.3px;
-    border-bottom: 2px solid #5A1A24; 
-    padding-bottom: 0.75rem;
-}
-
-ul {
-    margin-left: 1.5rem;
-    line-height: 1.8;
-    color: #cbd5e1;
-    font-size: 1.05rem;
-}
-
-li { margin-bottom: 0.6rem; }
-
-/* Contact Details Page Panel custom tweaks */
-.contact-grid-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin: 2.5rem 0;
-}
-.info-card-panel {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    padding: 1.75rem;
-    border-radius: 6px;
-    text-align: center;
-}
-.info-card-panel h4 {
-    color: #94a3b8;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-.info-card-panel p, .info-card-panel a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1.05rem;
-    text-decoration: none;
-}
-
-/* Responsive Mobile Configurations - FIXED IMAGE ORDER DIRECTION */
+/* Responsive Mobile Handling Configuration Overrides */
 @media (max-width: 992px) {
     .cockpit-container {
         grid-template-columns: 1fr;
@@ -288,12 +306,10 @@ li { margin-bottom: 0.6rem; }
         display: flex;
         flex-direction: column;
     }
-    /* Forces your portrait photo and badge stack to display FIRST at the top of mobile screens */
     .cockpit-left-anchor { 
         order: 1; 
         margin-bottom: 0.5rem;
     }
-    /* Places your text data and ledger row safely underneath the headshot container */
     .cockpit-main-ledger { 
         order: 2; 
         text-align: center; 
@@ -302,14 +318,8 @@ li { margin-bottom: 0.6rem; }
         width: 160px;
         height: 160px;
     }
-    .horizontal-contact-strip { 
-        justify-content: center; 
-        flex-direction: column; 
-        gap: 0.6rem; 
-    }
-    .strip-divider { 
-        display: none; 
-    }
+    .horizontal-contact-strip { justify-content: center; flex-direction: column; gap: 0.6rem; }
+    .strip-divider { display: none; }
     .ledger-row-grid { 
         grid-template-columns: 1fr 1fr; 
         gap: 1.5rem; 
@@ -320,10 +330,6 @@ li { margin-bottom: 0.6rem; }
         justify-content: center; 
         flex-direction: column;
         gap: 1rem;
-        width: 100%;
-    }
-    .btn-primary, .btn-secondary {
-        text-align: center;
         width: 100%;
     }
     .navbar { display: flex; flex-direction: column; gap: 1rem; }
