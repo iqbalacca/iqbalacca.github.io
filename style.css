@@ -1,5 +1,5 @@
 /* ==========================================================================
-   MASTER EXECUTIVE STYLE SHEET - MODERN DARK LUXURY BLUEPRINT
+   MASTER EXECUTIVE STYLE SHEET - MODERN DARK LUXURY BLUEPRINT (CONTRAST FIX)
    PALETTE: CHARCOAL, FLAME, ESPRESSO, BURGUNDY, ALABASTER
    ========================================================================== */
 
@@ -15,13 +15,13 @@
 /* Charcoal Black Full Page Canvas (#2B2B2B) */
 body {
     background-color: #2B2B2B;
-    color: #F4F3EF; /* Warm Alabaster Primary Text */
+    color: #F4F3EF; /* Warm Alabaster Primary Text for maximum readability */
     letter-spacing: -0.1px;
 }
 
 /* Navbar System aligned flat against the dark canvas */
 .navbar {
-    background-color: #212121; /* Slightly darker charcoal for depth elevation */
+    background-color: #212121; 
     color: #ffffff;
     display: grid;
     grid-template-columns: 1fr auto 1fr;
@@ -51,13 +51,13 @@ body {
     transition: color 0.2s ease;
 }
 
-/* Active and Hover elements highlight using your exact Flame color (#D9731A) */
+/* Active and Hover highlights using your Flame color (#D9731A) */
 .nav-links a.active, .nav-links a:hover {
     color: #D9731A;
     font-weight: 600;
 }
 
-/* Central Content Grid Frame - Removed White Sheet Boxes */
+/* Central Content Grid Frame */
 .main-wrapper {
     max-width: 950px;
     margin: 4rem auto;
@@ -67,10 +67,10 @@ body {
 
 .executive-panel {
     width: 100%;
-    padding: 1rem 0; /* Space out elements directly on the dark wrapper canvas */
+    padding: 1rem 0; 
 }
 
-/* Home-Only Header: Merges portrait image cleanly with details */
+/* Home-Only Header Block */
 .panel-header-block {
     display: flex;
     align-items: center;
@@ -92,17 +92,21 @@ body {
     font-size: 2.5rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.5px;
 }
 
-/* Subtitle title using your Deep Burgundy (#5A1A24) */
+/* CONTRAST FIX: Moved Burgundy (#5A1A24) into a solid premium label container background with white text */
 .subtitle {
-    color: #5A1A24;
-    font-size: 1.05rem;
+    display: inline-block;
+    background-color: #5A1A24; /* Deep Burgundy background tag box */
+    color: #FFFFFF;            /* Pure white high-contrast text */
+    font-size: 0.85rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    letter-spacing: 0.75px;
+    margin-bottom: 1.25rem;
     text-transform: uppercase;
 }
 
@@ -110,11 +114,11 @@ body {
     display: flex;
     gap: 2rem;
     font-size: 0.95rem;
-    color: #A0A0A0;
+    color: #cbd5e1; /* Made contact icons much lighter and legible */
     flex-wrap: wrap;
 }
 
-/* Numerical Metrics Grid Layout - Shifted to Deep Espresso Brown (#512C1D) */
+/* Numerical Metrics Grid Layout - Deep Espresso Brown (#512C1D) */
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -123,7 +127,7 @@ body {
 }
 
 .metric-card {
-    background-color: #512C1D; /* Deep Espresso Brown Panel */
+    background-color: #512C1D; 
     padding: 1.75rem 1.5rem;
     border-radius: 8px;
     border: 1px solid #663926;
@@ -147,7 +151,7 @@ body {
 
 .metric-card p {
     font-size: 0.85rem;
-    color: #F4F3EF; /* Alabaster text for clarity */
+    color: #F4F3EF; 
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -176,7 +180,7 @@ body {
 }
 
 .card-tag {
-    color: #D9731A; /* Flame card label flags */
+    color: #D9731A; 
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -198,7 +202,7 @@ h2 {
     color: #ffffff;
     margin-bottom: 1.75rem;
     letter-spacing: -0.3px;
-    border-bottom: 1px solid #3d3d3d;
+    border-bottom: 2px solid #5A1A24; /* CONTRAST FIX: Burgundy applied safely as an accent line marker */
     padding-bottom: 0.75rem;
 }
 
@@ -211,13 +215,13 @@ h3 {
 p {
     font-size: 1.05rem;
     line-height: 1.8;
-    color: #cbd5e1;
+    color: #F4F3EF; /* Clean high contrast Alabaster */
 }
 
 ul {
     margin-left: 1.5rem;
     line-height: 1.8;
-    color: #cbd5e1;
+    color: #F4F3EF;
     font-size: 1.05rem;
     margin-top: 0.75rem;
 }
