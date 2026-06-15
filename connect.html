@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Iqbal | Connect</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-grid-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        .info-card-panel {
+            background-color: #F4F3EF;
+            border: 1px solid #E5E5E0;
+            padding: 1.75rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+        .info-card-panel h4 {
+            color: #64748b;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        .info-card-panel p, .info-card-panel a {
+            color: #2B2B2B;
+            font-weight: 600;
+            font-size: 1.05rem;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -18,30 +47,31 @@
         </nav>
     </header>
 
-    <main class="hero-container">
-        <section class="profile-card">
-            <img src="profile.png" alt="Muhammad Iqbal" class="profile-img">
-            <h1>Muhammad Iqbal</h1>
-            <p class="subtitle">ACCA | CFO | Financial Stewardship</p>
-            <hr>
-            <div class="contact-details">
-                <p>📍 Dubai, UAE</p>
-                <p>📱 +971 52 312 3050</p>
-                <p>📧 iqbal.fcca@gmail.com</p>
-            </div>
-        </section>
-
-        <section class="bio-content">
+    <main class="main-wrapper">
+        <div class="executive-panel">
             <h2>Executive Placement Engagement</h2>
-            <p style="margin-bottom: 2.5rem; line-height: 1.7; font-size: 1.05rem; color: #4A4A4A;">I am open to discussions regarding corporate finance directorships, group controllership governance, and fractional CFO advisory tracks across mainland UAE, DIFC, and ADGM jurisdictions.</p>
-            
-            <div style="background: #F4F3EF; padding: 2.5rem 2rem; border-radius: 6px; text-align: center;">
-                <h3 style="color: #2B2B2B; margin-bottom: 1.25rem; font-size: 1.25rem;">Direct Communication Pipeline</h3>
-                <p style="margin-bottom: 0.75rem; font-size: 1.05rem; color: #4A4A4A;">Corporate Email: <strong style="color: #5A1A24;">iqbal.fcca@gmail.com</strong></p>
-                <p style="margin-bottom: 2rem; font-size: 1.05rem; color: #4A4A4A;">Direct Mobile: <strong style="color: #5A1A24;">+971 52 312 3050</strong></p>
-                <a href="https://linkedin.com" target="_blank" class="btn" style="background-color: #2B2B2B;">Access Verified LinkedIn Profile</a>
+            <p style="margin-bottom: 1.5rem;">I am available to evaluate senior financial leadership roles, corporate controllership positions, and multi-entity strategic governance structures across Mainland UAE, DIFC, and ADGM environments.</p>
+
+            <div class="contact-grid-row">
+                <div class="info-card-panel">
+                    <h4>Direct Email</h4>
+                    <a href="mailto:iqbal.fcca@gmail.com">iqbal.fcca@gmail.com</a>
+                </div>
+                <div class="info-card-panel">
+                    <h4>Corporate Phone</h4>
+                    <p>+971 52 312 3050</p>
+                </div>
+                <div class="info-card-panel">
+                    <h4>LinkedIn</h4>
+                    <a href="https://linkedin.com" target="_blank">Access Profile</a>
+                </div>
             </div>
-        </section>
+            
+            <div style="display: flex; gap: 1.5rem; justify-content: center; border-top: 1px solid #E5E5E0; padding-top: 1.5rem; font-weight: 600; color: #5A1A24; font-size: 0.95rem;">
+                <p>📍 Dubai, UAE Base</p>
+                <p>💼 15+ Years Regional Footprint</p>
+            </div>
+        </div>
     </main>
 
 </body>
