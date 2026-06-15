@@ -66,16 +66,16 @@ body {
     border-top: 4px solid #5A1A24; /* Burgundy Top Accent Trim */
 }
 
-/* Professional Circle Profile Photo Frame Configuration */
+/* Professional Square Profile Photo Frame Configuration */
 .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 180px;          /* Increased size to display shoulders/suit clearly */
+    height: 180px;         /* Proportional square constraints */
+    border-radius: 8px;    /* Clean, premium slightly rounded corners */
     margin: 0 auto 1.5rem auto;
     object-fit: cover;
     display: block;
-    border: 3px solid #F4F3EF;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #E5E5E0;
+    box-shadow: 0 4px 12px rgba(43, 43, 43, 0.08); /* Professional depth shadow */
 }
 
 .profile-card h1 {
