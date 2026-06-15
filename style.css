@@ -56,26 +56,25 @@ body {
     gap: 2.5rem;
 }
 
-/* Left Profile Executive Card */
+/* Left Profile Executive Card - BURGUNDY TOP BORDER REMOVED */
 .profile-card {
     background-color: #ffffff;
     padding: 3rem 2rem;
     border-radius: 6px;
     text-align: center;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-    border-top: 4px solid #5A1A24; /* Burgundy Top Accent Trim */
 }
 
-/* Professional Square Profile Photo Frame Configuration */
+/* Professional Square Profile Photo Frame - PADDING ADDED TO PUSH DOWN */
 .profile-img {
-    width: 180px;          /* Increased size to display shoulders/suit clearly */
-    height: 180px;         /* Proportional square constraints */
-    border-radius: 8px;    /* Clean, premium slightly rounded corners */
-    margin: 0 auto 1.5rem auto;
+    width: 180px;          
+    height: 180px;         
+    border-radius: 8px;    
+    margin: 1.5rem auto;   /* Added vertical margin to move the image comfortably down */
     object-fit: cover;
     display: block;
     border: 1px solid #E5E5E0;
-    box-shadow: 0 4px 12px rgba(43, 43, 43, 0.08); /* Professional depth shadow */
+    box-shadow: 0 4px 12px rgba(43, 43, 43, 0.08); 
 }
 
 .profile-card h1 {
