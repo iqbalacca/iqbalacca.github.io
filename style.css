@@ -1,3 +1,8 @@
+/* ==========================================================================
+   PREMIUM EXECUTIVE LAYOUT - MUHAMMAD IQBAL (FCCA)
+   ========================================================================== */
+
+/* Base Reset and Fonts */
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +10,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Luxury Warm Canvas Background */
 body {
-    background-color: #f4f6f9;
-    color: #333333;
+    background-color: #F4F3EF;
+    color: #2B2B2B;
 }
 
+/* Charcoal Top Navigation Bar */
 .navbar {
-    background-color: #1e293b;
+    background-color: #2B2B2B;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .nav-links a {
@@ -27,95 +40,100 @@ body {
     transition: color 0.2s ease;
 }
 
+/* Hover Accent using the Muted Amber */
 .nav-links a.active, .nav-links a:hover {
-    color: #ffffff;
+    color: #D9731A;
     font-weight: 600;
 }
 
+/* Two-Column Layout Grid */
 .hero-container {
     max-width: 1100px;
-    margin: 3rem auto;
+    margin: 4rem auto;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
+/* Left Profile Executive Card */
 .profile-card {
     background-color: #ffffff;
-    padding: 2.5rem 2rem;
-    border-radius: 8px;
+    padding: 3rem 2rem;
+    border-radius: 6px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    border-top: 4px solid #5A1A24; /* Burgundy Top Accent Trim */
 }
 
-.avatar-placeholder {
-    width: 110px;
-    height: 110px;
-    background-color: #1e293b;
-    color: #ffffff;
+/* Professional Circle Profile Photo Frame Configuration */
+.profile-img {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     margin: 0 auto 1.5rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.2rem;
-    font-weight: bold;
-    border: 3px solid #e2e8f0;
+    object-fit: cover;
+    display: block;
+    border: 3px solid #F4F3EF;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .profile-card h1 {
     font-size: 1.6rem;
-    color: #1e293b;
-    margin-bottom: 0.25rem;
+    color: #2B2B2B;
+    margin-bottom: 0.35rem;
 }
 
+/* Subtitle utilizing Burgundy */
 .subtitle {
-    color: #64748b;
+    color: #5A1A24;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    letter-spacing: 0.5px;
     margin-bottom: 1.5rem;
 }
 
 hr {
     border: 0;
     height: 1px;
-    background: #e2e8f0;
+    background: #E5E5E0;
     margin: 1.5rem 0;
 }
 
 .contact-details p {
-    font-size: 0.9rem;
-    color: #475569;
-    margin: 0.75rem 0;
+    font-size: 0.95rem;
+    color: #4A4A4A;
+    margin: 0.8rem 0;
     text-align: left;
 }
 
+/* Right Narrative Content Panel */
 .bio-content {
     background-color: #ffffff;
-    padding: 3rem 2.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 3.5rem 3rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .bio-content h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.25rem;
-    color: #1e293b;
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+    color: #2B2B2B;
 }
 
 .bio-content p {
     font-size: 1.05rem;
-    line-height: 1.7;
-    color: #475569;
-    margin-bottom: 2rem;
+    line-height: 1.8;
+    color: #4A4A4A;
+    margin-bottom: 2.5rem;
 }
 
+/* Premium Amber Call to Action Button */
 .btn {
     display: inline-block;
-    background-color: #1e293b;
-    color: white;
-    padding: 0.8rem 1.8rem;
+    background-color: #D9731A;
+    color: #ffffff;
+    padding: 0.9rem 2rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
@@ -123,13 +141,14 @@ hr {
 }
 
 .btn:hover {
-    background-color: #0f172a;
+    background-color: #b55d12;
 }
 
+/* Responsive Scaling for Mobile Screens */
 @media (max-width: 768px) {
     .hero-container {
         grid-template-columns: 1fr;
-        margin: 1.5rem auto;
+        margin: 2rem auto;
     }
     .navbar {
         flex-direction: column;
