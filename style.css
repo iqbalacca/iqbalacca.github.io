@@ -1,17 +1,21 @@
 /* ==========================================================================
-   MASTER EXECUTIVE STYLE SHEET - MODERN CLEAN FULL-WIDTH CANVAS
+   MASTER EXECUTIVE STYLE SHEET - IBM PLEX SANS ENTERPRISE BLUEPRINT
    ========================================================================== */
+
+/* Direct Secure Connection to the Official IBM Plex Font Engine Archive */
+@import url('https://googleapis.com');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #F4F3EF;
     color: #2B2B2B;
+    letter-spacing: -0.1px; /* Applies IBM's signature precision spacing */
 }
 
 /* Charcoal Navigation Bar */
@@ -66,7 +70,7 @@ body {
     width: 100%;
 }
 
-/* Exclusive Home-Only Intro Component block */
+/* Home-Only Intro Component Block */
 .home-intro-block {
     display: flex;
     align-items: center;
@@ -86,13 +90,15 @@ body {
 
 .intro-text h1 {
     font-size: 2.2rem;
+    font-weight: 700;
     color: #2B2B2B;
     margin-bottom: 0.25rem;
+    letter-spacing: -0.5px;
 }
 
 .subtitle {
     color: #5A1A24;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 0.75rem;
@@ -106,7 +112,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Metrics Highlight Grid cards row */
+/* Metrics Highlight Grid Cards Row with Tabular Numbers */
 .metrics-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -124,8 +130,10 @@ body {
 
 .metric-card h3 {
     color: #D9731A;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    font-weight: 600;
     margin-bottom: 0.25rem;
+    font-variant-numeric: tabular-nums; /* Forces numerical numbers to align strictly */
 }
 
 .metric-card p {
@@ -134,18 +142,21 @@ body {
     font-weight: 600;
 }
 
-/* Content Element Sizing adjustments */
+/* Content Element Sizing Adjustments */
 h2 {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
+    font-weight: 600;
     color: #2B2B2B;
     margin-bottom: 1.5rem;
     border-bottom: 2px solid #F4F3EF;
     padding-bottom: 0.5rem;
+    letter-spacing: -0.3px;
 }
 
 h3 {
     color: #2B2B2B;
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 p {
@@ -166,6 +177,7 @@ li {
     margin-bottom: 0.5rem;
 }
 
+/* Interactive Action Buttons */
 .btn {
     display: inline-block;
     background-color: #D9731A;
@@ -174,14 +186,15 @@ li {
     text-decoration: none;
     border-radius: 4px;
     font-weight: 600;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
     background-color: #b55d12;
+    transform: translateY(-1px);
 }
 
-/* Mobile Responsiveness scaling */
+/* Mobile Responsiveness Scaling */
 @media (max-width: 768px) {
     .navbar {
         display: flex;
