@@ -1345,3 +1345,28 @@ h2.hero-pitch-title.hero-pitch-compact {
 
 /* Ensure text size is fine as-is — no increase needed */
 /* Current: font-size: 1.1rem on .footprint-country, which is readable */
+
+
+/* ==========================================================================
+   EXPERTISE PAGE — SECTION SPACING
+   ========================================================================== */
+
+.section-spaced {
+    margin-top: 3.5rem;
+}
+
+/* Ensure the last section has bottom breathing room */
+.global-section.section-spaced {
+    margin-bottom: 3rem;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+    .section-spaced {
+        margin-top: 2.5rem;
+    }
+
+    .global-section.section-spaced {
+        margin-bottom: 2rem;
+    }
+}
