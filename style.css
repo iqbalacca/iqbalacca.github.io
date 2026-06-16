@@ -1193,6 +1193,13 @@ li { margin-bottom: 0.6rem; }
    HOME PAGE — CLICKABLE METRIC BOXES + DETAIL SECTIONS
    ========================================================================== */
 
+/* Larger tagline text */
+.tagline-text-stamp.tagline-large {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
 /* Make ledger items clickable with cursor */
 .ledger-data-item {
     cursor: pointer;
@@ -1272,8 +1279,13 @@ li { margin-bottom: 0.6rem; }
     width: 100%;
 }
 
-/* Responsive for detail sections */
+/* Responsive for detail sections and tagline */
 @media (max-width: 768px) {
+    .tagline-text-stamp.tagline-large {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+
     .detail-section {
         padding: 1.25rem;
     }
@@ -1284,5 +1296,12 @@ li { margin-bottom: 0.6rem; }
 
     .detail-section p {
         font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline-text-stamp.tagline-large {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
     }
 }
