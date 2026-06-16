@@ -31,10 +31,18 @@
                 I work across eight high-impact domains, each backed by real project delivery, not theory.
             </p>
 
-            <!-- Domain Expertise Grid -->
-            <div class="expertise-grid">
+            <!-- Slicer / Filter Buttons -->
+            <div class="slicer-row">
+                <button class="slicer-btn active" data-filter="all">All</button>
+                <button class="slicer-btn" data-filter="domain">Domains</button>
+                <button class="slicer-btn" data-filter="technical">Technical</button>
+                <button class="slicer-btn" data-filter="global">Global</button>
+                <button class="slicer-btn" data-filter="credentials">Credentials</button>
+            </div>
 
-                <!-- Card 1: Regulatory & Compliance -->
+            <!-- Domain Expertise Grid -->
+            <div class="expertise-grid" data-category="domain">
+
                 <div class="expertise-card">
                     <h3>Regulatory & Compliance</h3>
                     <ul>
@@ -44,7 +52,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 2: Advisory & Client Delivery -->
                 <div class="expertise-card">
                     <h3>Advisory & Client Delivery</h3>
                     <ul>
@@ -54,7 +61,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 3: Multi-Entity Group Treasury -->
                 <div class="expertise-card">
                     <h3>Multi-Entity Group Treasury</h3>
                     <ul>
@@ -64,7 +70,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 4: Capital Markets & Private Equity -->
                 <div class="expertise-card">
                     <h3>Capital Markets & Private Equity</h3>
                     <ul>
@@ -74,7 +79,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 5: Tax & Regulatory -->
                 <div class="expertise-card">
                     <h3>Tax & Regulatory</h3>
                     <ul>
@@ -83,7 +87,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 6: ERP & Systems -->
                 <div class="expertise-card">
                     <h3>ERP & Systems</h3>
                     <ul>
@@ -93,7 +96,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 7: Cost Restructuring -->
                 <div class="expertise-card">
                     <h3>Cost Restructuring</h3>
                     <ul>
@@ -103,7 +105,6 @@
                     </ul>
                 </div>
 
-                <!-- Card 8: Sustainability & ESG -->
                 <div class="expertise-card">
                     <h3>Sustainability & ESG</h3>
                     <ul>
@@ -114,77 +115,108 @@
                 </div>
             </div>
 
-            <!-- Technical Literacy -->
-            <div class="section-divider"></div>
-            <p class="expertise-overline">Technical Literacy</p>
-            <h2 class="section-header-line">Technical Stack</h2>
-
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <h4>Power BI</h4>
-                    <p>Microsoft Certified. Dashboards, executive reporting.</p>
+            <!-- Technical Stack -->
+            <div class="tech-section" data-category="technical">
+                <div class="section-header-compact">
+                    <h2>Technical Stack</h2>
                 </div>
-                <div class="tech-card">
-                    <h4>SQL</h4>
-                    <p>CS50 Harvard. Data extraction, automation.</p>
-                </div>
-                <div class="tech-card">
-                    <h4>AI in Business</h4>
-                    <p>AI Business Academy. Predictive models, workflow design.</p>
-                </div>
-                <div class="tech-card">
-                    <h4>NetSuite & ERP</h4>
-                    <p>Multi-jurisdiction deployment, banking API integration, marketplace automation.</p>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4>Power BI</h4>
+                        <p>Microsoft Certified. Dashboards, executive reporting.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>SQL</h4>
+                        <p>CS50 Harvard. Data extraction, automation.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>AI in Business</h4>
+                        <p>AI Business Academy. Predictive models, workflow design.</p>
+                    </div>
+                    <div class="tech-card">
+                        <h4>NetSuite & ERP</h4>
+                        <p>Multi-jurisdiction deployment, banking API integration, marketplace automation.</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Global Exposure -->
-            <div class="section-divider"></div>
-            <p class="expertise-overline">Global Exposure</p>
-            <h2 class="section-header-line">Operational Footprint</h2>
-
-            <div class="global-footprint">
-                <span class="footprint-country">UAE</span>
-                <span class="footprint-dot">·</span>
-                <span class="footprint-country">KSA</span>
-                <span class="footprint-dot">·</span>
-                <span class="footprint-country">UK</span>
-                <span class="footprint-dot">·</span>
-                <span class="footprint-country">BVI</span>
-                <span class="footprint-dot">·</span>
-                <span class="footprint-country">Germany</span>
+            <div class="global-section" data-category="global">
+                <div class="section-header-compact">
+                    <h2>Operational Footprint</h2>
+                </div>
+                <div class="global-footprint">
+                    <span class="footprint-country">UAE</span>
+                    <span class="footprint-dot">·</span>
+                    <span class="footprint-country">KSA</span>
+                    <span class="footprint-dot">·</span>
+                    <span class="footprint-country">UK</span>
+                    <span class="footprint-dot">·</span>
+                    <span class="footprint-country">BVI</span>
+                    <span class="footprint-dot">·</span>
+                    <span class="footprint-country">Germany</span>
+                </div>
             </div>
 
             <!-- Education & Credentials -->
-            <div class="section-divider"></div>
-            <p class="expertise-overline">Education & Credentials</p>
-            <h2 class="section-header-line">Education & Professional Credentials</h2>
-
-            <div class="credentials-grid">
-                <div class="credential-item">
-                    <h4>ACCA Member</h4>
-                    <p>Association of Chartered Certified Accountants, UK</p>
+            <div class="credentials-section" data-category="credentials">
+                <div class="section-header-compact">
+                    <h2>Credentials</h2>
                 </div>
-                <div class="credential-item">
-                    <h4>MBA</h4>
-                    <p>University of Karachi, Pakistan</p>
-                </div>
-                <div class="credential-item">
-                    <h4>B. Com</h4>
-                    <p>University of Karachi, Pakistan</p>
-                </div>
-                <div class="credential-item">
-                    <h4>FMVA®</h4>
-                    <p>Corporate Finance Institute (CFI)</p>
-                </div>
-                <div class="credential-item">
-                    <h4>DipIFR</h4>
-                    <p>ACCA, UK</p>
+                <div class="credentials-grid">
+                    <div class="credential-item">
+                        <h4>ACCA Member</h4>
+                        <p>Association of Chartered Certified Accountants, UK</p>
+                    </div>
+                    <div class="credential-item">
+                        <h4>MBA</h4>
+                        <p>University of Karachi, Pakistan</p>
+                    </div>
+                    <div class="credential-item">
+                        <h4>B. Com</h4>
+                        <p>University of Karachi, Pakistan</p>
+                    </div>
+                    <div class="credential-item">
+                        <h4>FMVA®</h4>
+                        <p>Corporate Finance Institute (CFI)</p>
+                    </div>
+                    <div class="credential-item">
+                        <h4>DipIFR</h4>
+                        <p>ACCA, UK</p>
+                    </div>
                 </div>
             </div>
 
         </div>
     </main>
+
+    <!-- Slicer JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slicerBtns = document.querySelectorAll('.slicer-btn');
+            const sections = document.querySelectorAll('[data-category]');
+
+            slicerBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+
+                    // Update active button
+                    slicerBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Show/hide sections
+                    sections.forEach(section => {
+                        if (filter === 'all') {
+                            section.style.display = '';
+                        } else {
+                            const category = section.getAttribute('data-category');
+                            section.style.display = (category === filter) ? '' : 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
