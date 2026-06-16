@@ -148,6 +148,17 @@ body {
     letter-spacing: 0.3px;
     line-height: 1;
 }
+/* Contact strip links */
+.horizontal-contact-strip a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.horizontal-contact-strip a:hover {
+    color: #C26112;
+}
+
 
 /* REFINED HEADLINE: Reduced font size and forced standard non-caps casing text transform rules */
 h2.hero-pitch-title {
