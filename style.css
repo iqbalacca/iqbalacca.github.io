@@ -1333,3 +1333,15 @@ h2.hero-pitch-title.hero-pitch-compact {
         margin-bottom: 1.5rem;
     }
 }
+
+
+/* ==========================================================================
+   EXPERTISE PAGE — LEFT-ALIGNED GLOBAL FOOTPRINT
+   ========================================================================== */
+
+.global-footprint-left {
+    justify-content: flex-start !important;
+}
+
+/* Ensure text size is fine as-is — no increase needed */
+/* Current: font-size: 1.1rem on .footprint-country, which is readable */
