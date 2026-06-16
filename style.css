@@ -1,155 +1,1335 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Iqbal | ACCA Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-<base target="_blank">
-<base target="_blank">
-</head>
-<body>
+/* ==========================================================================
+   MASTER EXECUTIVE STYLE SHEET - REFINED INSTITUTIONAL COCKPIT LAYOUT
+   ========================================================================== */
 
-    <!-- Top Corporate Navigation Header -->
-    <header class="navbar">
-        <div class="logo">Muhammad Iqbal, ACCA</div>
-        <nav class="nav-links">
-            <a href="index.html" class="active" target="_self">Home</a>
-            <a href="experience.html" target="_self">Experience</a>
-            <a href="expertise.html" target="_self">Expertise</a>
-            <a href="connect.html" target="_self">Connect</a>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
 
-    <!-- 2026 Institutional Cockpit Dashboard Framework Container -->
-    <main class="cockpit-container">
+/* Charcoal Black Full Page Canvas (#2B2B2B) */
+body {
+    background-color: #2B2B2B;
+    color: #F4F3EF; 
+    letter-spacing: -0.1px;
+    min-height: 100vh;
+}
 
-        <!-- Column 1: Left Floating Profile Anchor Box -->
-        <section class="cockpit-left-anchor">
-            <img src="profile.png" alt="Muhammad Iqbal" class="cockpit-profile-img">
-            <div class="badge-stack">
-                <div class="badge-tag">ACCA Member</div>
-                <div class="badge-tag">Finance Director</div>
-            </div>
-            <!-- Left Tagline Component -->
-            <div class="tagline-container-block">
-                <p class="tagline-text-stamp tagline-large">
-                    Build, Control, Scale & Deliver
-                </p>
-            </div>
-        </section>
+/* Centered Top Menu Navigation Bar */
+.navbar {
+    background-color: #1A1A1D; 
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1.4rem 3rem;
+    border-bottom: 1px solid #36363B;
+}
 
-        <!-- Column 2: Right Wide Institutional Financial Ledger Sheet -->
-        <section class="cockpit-main-ledger">
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    justify-self: start;
+}
 
-            <!-- Sleek Single Line Corporate Header Strip -->
-            <div class="executive-widescreen-header">
-                <h1>Muhammad Iqbal</h1>
-                <div class="horizontal-contact-strip">
-                    <a href="mailto:iqbal.fcca@gmail.com?subject=Executive%20Inquiry%20-%20Muhammad%20Iqbal">iqbal.fcca@gmail.com</a> &nbsp;|&nbsp; 
-                    <a href="tel:+971523123050">+971 52 312 3050</a> &nbsp;|&nbsp; 
-                    Dubai, UAE
-                </div>
-            </div>
+.nav-links {
+    justify-self: center;
+}
 
-            <!-- Fixed Headline: Problem-first opening, reduced size for 2 lines -->
-            <h2 class="hero-pitch-title hero-pitch-compact">
-                I build financial infrastructure that does two things at once: keeps the business compliant and controlled, and unlocks capital, liquidity, and profitability that would not exist otherwise.
-            </h2>
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
 
-            <!-- Section Header Box -->
-            <h2 class="section-header-line">Professional Summary</h2>
+.nav-links a.active, .nav-links a:hover {
+    color: #C26112;
+    font-weight: 600;
+}
 
-            <!-- Summary Column Blocks -->
-            <div class="summary-columns-container">
-                <div class="summary-column-item">
-                    <strong>Strategic Mandate</strong>
-                    Most finance leaders either control the books or sit close to capital. I do both. I also build the infrastructure that connects the two.
-                </div>
-                <div class="summary-column-item">
-                    <strong>Edge</strong>
-                    Eighteen years across regulated investment environments, venture-backed platforms, and multi-entity cross-border structures. Not sequential, concurrent. That overlap is uncommon.
-                </div>
-                <div class="summary-column-item">
-                    <strong>Execution</strong>
-                    I do not arrive to maintain what exists. I arrive to build what should exist and make sure it holds under pressure.
-                </div>
-            </div>
+/* Widescreen Dashboard Master Workspace Framework */
+.cockpit-container {
+    max-width: 1250px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr; 
+    gap: 4.5rem;
+    width: 100%;
+}
 
-            <!-- REFINING 5-CARD LEDGER GRID WITH UPGRADED DESCRIPTORS -->
-            <div class="ledger-row-grid">
-                <div class="ledger-data-item" onclick="scrollToSection('cross-border')">
-                    <h3>$17.5M</h3>
-                    <p>Capital<br>Raised</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('regulated-governance')">
-                    <h3>Regulated</h3>
-                    <p>Finance<br>Officer</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('branch-economics')">
-                    <h3>AED 4.5M</h3> 
-                    <p>EBITDA<br>Improvement</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('cash-flow')">
-                    <h3>AED 3M</h3>
-                    <p>Operating<br>Liquidity</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('marketplace-infra')">
-                    <h3>Marketplace</h3> 
-                    <p>ERP<br>INFRASTRUCTURE</p> 
-                </div>
-            </div>
+/* Left Column Profile Card Anchor Box */
+.cockpit-left-anchor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 0.85rem; 
+}
 
-            <!-- DETAIL SECTIONS -->
-            <div class="detail-sections-container">
+.cockpit-profile-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 6px; 
+    object-fit: cover;
+    border: 1px solid #3d3d45;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    filter: brightness(0.65) contrast(0.85); 
+    display: block;
+}
 
-                <section id="cross-border" class="detail-section">
-                    <h3>Cross Border Financial Architecture</h3>
-                    <p>Constructed legal, tax, and banking frameworks across four countries by structuring a multi-jurisdiction holding architecture, closing a USD 17.5M venture capital round with full retained ownership of fund deployment and investor reporting.</p>
-                </section>
+/* Cohesive Badge Stack Components */
+.badge-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; 
+    width: 100%;
+}
 
-                <section id="regulated-governance" class="detail-section">
-                    <h3>Regulated Fund Governance</h3>
-                    <p>Maintained 100% regulatory standing for USD 450M in Assets Under Management by serving as Interim Finance Officer under DFSA and FSRA frameworks across DIFC and ADGM simultaneously.</p>
-                </section>
+.badge-tag {
+    background-color: #1A1A1D;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.4rem;
+    border-radius: 4px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid #C26112; 
+}
 
-                <section id="branch-economics" class="detail-section">
-                    <h3>Branch Network Economics</h3>
-                    <p>Delivered AED 4.5M EBITDA improvement by rationalising underperforming locations, restructuring operating costs across a ten-branch network, and redeploying overhead to higher-margin channels.</p>
-                </section>
+/* Left Column Text: Clean Left-Aligned Philosophy Tagline Block */
+.tagline-container-block {
+    padding: 0.5rem 0 0 0.25rem;
+    width: 100%;
+    text-align: left;
+}
 
-                <section id="cash-flow" class="detail-section">
-                    <h3>Cash Flow Engineering</h3>
-                    <p>Unlocked AED 3M in operating liquidity within six months by restructuring procurement to unified 30-45 day trade credit, consolidating suppliers, and negotiating volume rebates across the supply chain.</p>
-                </section>
+.tagline-text-stamp {
+    color: #C26112;
+    font-size: 0.75rem; 
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1.45; 
+}
 
-                <section id="marketplace-infra" class="detail-section">
-                    <h3>Marketplace Financial Infrastructure</h3>
-                    <p>Deployed a multi-entity NetSuite system across four jurisdictions by integrating ecommerce, payables, receivables, tax treatment, and HSBC banking API, automating settlement, invoice generation, and multi-currency reconciliation across a live marketplace.</p>
-                </section>
+/* Right Main Institutional Data Sheet Section */
+.cockpit-main-ledger {
+    display: flex;
+    flex-direction: column;
+}
 
-            </div>
+/* Widescreen Horizontal Top Contact Strip Row */
+.executive-widescreen-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #3d3d45;
+    padding-bottom: 1.25rem;
+}
 
-            <!-- Twin Modern Flat Action Buttons Row Layout -->
-            <div class="dual-action-row">
-                <a href="experience.html" class="btn-primary" target="_self">Explore Timeline</a>
-                <a href="https://www.linkedin.com/in/iqbal-acca/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
-            </div>
-        </section>
+.executive-widescreen-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.6rem;
+}
 
-    </main>
+.horizontal-contact-strip {
+    font-size: 0.95rem;
+    color: #cbd5e1; 
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    line-height: 1;
+}
 
-    <script>
-        function scrollToSection(id) {
-            const target = document.getElementById(id);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                target.classList.add('highlight-pulse');
-                setTimeout(() => target.classList.remove('highlight-pulse'), 1500);
-            }
-        }
-    </script>
+/* Contact strip links */
+.horizontal-contact-strip a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
 
-</body>
-</html>
+.horizontal-contact-strip a:hover {
+    color: #C26112;
+}
+
+/* REFINED HEADLINE: Reduced font size and forced standard non-caps casing text transform rules */
+h2.hero-pitch-title {
+    font-size: 1.35rem; 
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.1px;
+    line-height: 1.4;
+    text-transform: none !important; 
+}
+
+p.hero-sub-pitch {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #a1a1aa;
+    margin-bottom: 2.5rem;
+    line-height: 1.5;
+}
+
+h2.section-header-line {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #94a3b8;
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #3d3d45;
+    padding-bottom: 0.5rem;
+}
+
+/* Broken Up Columns for Professional Summary */
+.summary-columns-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.summary-column-item {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: #cbd5e1;
+}
+
+.summary-column-item strong {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem; 
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+/* STATS SECTION GRID STRUCTURE */
+.ledger-row-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    gap: 1.5rem;
+    border-top: 1px solid #3d3d45;
+    border-bottom: 1px solid #3d3d45;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.ledger-data-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.ledger-data-item h3 {
+    color: #C26112; 
+    font-size: 1.65rem; 
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap; 
+}
+
+.ledger-data-item p {
+    font-size: 0.66rem; 
+    font-weight: 500;   
+    color: #94a3b8; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6;   
+}
+
+/* Twin Interactive Call Buttons Layout row */
+.dual-action-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #C26112;
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #a4510d;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid #44444a;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background-color: #1A1A1D;
+    border-color: #ffffff;
+}
+
+/* Shared Central Sheets for Experience / Expertise sub pages */
+.main-wrapper {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    width: 100%;
+}
+
+.executive-panel {
+    width: 100%;
+    padding: 1rem 0;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+ul {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+    font-size: 1.05rem;
+}
+
+li { margin-bottom: 0.6rem; }
+
+/* Contact Details Page Panel custom tweaks */
+.contact-grid-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+.info-card-panel {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    padding: 1.75rem;
+    border-radius: 6px;
+    text-align: center;
+}
+.info-card-panel h4 {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+.info-card-panel p, .info-card-panel a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   DARK INSTITUTIONAL TIMELINE ACCORDION BREAKOUT (EXPERIENCE PAGE)
+   ========================================================================== */
+
+/* Override the 2-column grid to make the experience ledger full width */
+.cockpit-container.full-width-layout {
+    display: block; 
+    max-width: 950px; 
+    margin: 4rem auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.cockpit-container.full-width-layout .cockpit-main-ledger {
+    width: 100%;
+}
+
+/* Premium Interactive Dark Accordion Container */
+.timeline-accordion-item {
+    background-color: #1A1A1D; 
+    border: 1px solid #36363B; 
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    width: 100%;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Highlight the active item when a recruiter expands it */
+.timeline-accordion-item[open] {
+    border-color: #C26112; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Interactive Summary Header Customization */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.75rem;
+    cursor: pointer;
+    background-color: #1A1A1D;
+    list-style: none; 
+    user-select: none;
+    position: relative;
+}
+
+.accordion-header::-webkit-details-marker {
+    display: none; 
+}
+
+/* Custom indicator symbol styling (+ / -) */
+.accordion-header::after {
+    content: '+';
+    font-size: 1.4rem;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-left: 1.5rem;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+    min-width: 20px;
+    text-align: center;
+}
+
+.timeline-accordion-item[open] .accordion-header::after {
+    content: '−';
+    color: #C26112;
+}
+
+.accordion-header:hover {
+    background-color: #222226; 
+}
+
+/* Typography positioning inside headers */
+.header-main-info {
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+}
+
+.header-main-info .role-title {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin: 0 0 0.3rem 0;
+    font-weight: 600;
+}
+
+.header-main-info .company-sub {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin: 0;
+    font-weight: 500;
+}
+
+.header-meta-info {
+    text-align: right;
+    margin-left: 2rem;
+    flex-shrink: 0;
+}
+
+.header-meta-info .timeline-date {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.header-meta-info .timeline-location {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 0.25rem;
+}
+
+/* Inside Expanded Content Formatting Layouts */
+.accordion-content {
+    padding: 0 1.75rem 1.5rem 1.75rem;
+    background-color: #1A1A1D;
+    text-align: left;
+}
+
+/* Separator Row for metadata context */
+.company-context-row {
+    margin-bottom: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-top: 1px solid #2b2b30;
+    border-bottom: 1px dashed #2b2b30;
+}
+
+/* Context Badges formatting */
+.industry-badge {
+    display: inline-block;
+    background-color: #C26112;
+    color: #1A1A1D;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.35rem 0.75rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.company-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.experience-bullets {
+    margin: 0 0 1.25rem 1.25rem;
+    padding: 0;
+    list-style-type: square;
+}
+
+.experience-bullets li {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+}
+
+.experience-bullets li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.skill-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-pill {
+    background-color: transparent;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid #36363B;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+    border-color: #C26112;
+    color: #C26112;
+}
+
+.fractional-tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #94a3b8;
+    margin-left: 0.5rem;
+}
+
+.timeline-container {
+    width: 100%;
+}
+
+.timeline-footer-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   CONNECT PAGE — WORLD-CLASS CONTACT ARCHITECTURE
+   ========================================================================== */
+
+.connect-panel {
+    text-align: left;
+    padding: 2rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.connect-overline {
+    color: #C26112;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.connect-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.connect-subline {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 0 3rem 0;
+}
+
+/* Contact Card Matrix */
+.contact-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 0 2.5rem 0;
+}
+
+.contact-data-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.5rem 1rem;
+    text-align: left;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.contact-data-card:hover {
+    border-color: #C26112;
+    box-shadow: 0 8px 30px rgba(194, 97, 18, 0.08);
+    transform: translateY(-2px);
+}
+
+.card-icon {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: #C26112;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.contact-data-card:hover .card-icon {
+    opacity: 1;
+}
+
+.card-tag {
+    color: #C26112;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+.card-core-value {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+    word-break: break-word;
+    line-height: 1.4;
+}
+
+.card-hint {
+    color: #64748b;
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0.15rem 0 0 0;
+}
+
+/* Status Chip Row */
+.status-chip-row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    border-top: 1px solid #3d3d45;
+    padding-top: 2rem;
+    max-width: 900px;
+    margin: 0;
+}
+
+.status-chip {
+    background-color: #1A1A1D;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #36363B;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem 1.5rem;
+        text-align: center;
+    }
+
+    .logo {
+        justify-self: center;
+    }
+
+    .nav-links {
+        justify-self: center;
+    }
+
+    .nav-links a {
+        margin: 0 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .cockpit-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    .cockpit-left-anchor {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cockpit-profile-img {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    .tagline-container-block {
+        text-align: center;
+    }
+
+    .executive-widescreen-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .horizontal-contact-strip {
+        font-size: 0.85rem;
+    }
+
+    h2.hero-pitch-title {
+        font-size: 1.15rem;
+    }
+
+    .summary-columns-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ledger-row-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .dual-action-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+
+    /* Experience page mobile */
+    .cockpit-container.full-width-layout {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .accordion-header {
+        padding: 1.25rem 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .accordion-header::after {
+        position: absolute;
+        right: 1.25rem;
+        top: 1.5rem;
+        font-size: 1.6rem;
+        color: #C26112;
+    }
+
+    .header-meta-info {
+        text-align: left;
+        margin-left: 0;
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .header-meta-info .timeline-date,
+    .header-meta-info .timeline-location {
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .accordion-content {
+        padding: 0 1.25rem 1.5rem 1.25rem;
+    }
+
+    .ledger-data-item h3 {
+        font-size: 1.35rem;
+    }
+
+    /* Connect page mobile */
+    .connect-headline {
+        font-size: 1.7rem;
+    }
+
+    .connect-subline {
+        font-size: 0.95rem;
+    }
+
+    .contact-matrix-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .contact-data-card {
+        padding: 1.25rem 0.875rem;
+    }
+
+    .card-core-value {
+        font-size: 0.85rem;
+    }
+
+    .status-chip-row {
+        gap: 0.6rem;
+        padding-top: 1.5rem;
+    }
+
+    .status-chip {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ledger-row-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ledger-data-item h3 {
+        font-size: 1.5rem;
+    }
+
+    .header-main-info .role-title {
+        font-size: 1.05rem;
+    }
+
+    .header-main-info .company-sub {
+        font-size: 0.85rem;
+    }
+
+    .skill-pill-group {
+        gap: 0.4rem;
+    }
+
+    .skill-pill {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .contact-matrix-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .connect-headline {
+        font-size: 1.4rem;
+    }
+
+    .accordion-header::after {
+        font-size: 1.8rem;
+        top: 1.25rem;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   EXPERTISE PAGE — SLICER + COMPACT LAYOUT
+   ========================================================================== */
+
+.expertise-panel {
+    padding: 2rem 0;
+}
+
+.expertise-overline {
+    color: #C26112;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.expertise-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.expertise-subline {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin: 0 0 2rem 0;
+    white-space: nowrap;
+}
+
+/* Slicer / Filter Buttons */
+.slicer-row {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.slicer-btn {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #36363B;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.slicer-btn:hover {
+    border-color: #C26112;
+    color: #C26112;
+}
+
+.slicer-btn.active {
+    background-color: #C26112;
+    color: #ffffff;
+    border-color: #C26112;
+}
+
+/* Domain Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.expertise-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.25rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expertise-card:hover {
+    border-color: #C26112;
+    box-shadow: 0 8px 30px rgba(194, 97, 18, 0.08);
+}
+
+.expertise-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+.expertise-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.expertise-card ul li {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin-bottom: 0.4rem;
+    padding-left: 0.9rem;
+    position: relative;
+}
+
+.expertise-card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #C26112;
+    font-weight: 700;
+}
+
+/* Section Header Compact */
+.section-header-compact {
+    margin-bottom: 1rem;
+}
+
+.section-header-compact h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Technical Stack */
+.tech-section {
+    margin-bottom: 2rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.tech-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.25rem;
+    transition: border-color 0.25s ease;
+}
+
+.tech-card:hover {
+    border-color: #C26112;
+}
+
+.tech-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.tech-card p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Global Exposure */
+.global-section {
+    margin-bottom: 2rem;
+}
+
+.global-footprint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footprint-country {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.footprint-dot {
+    color: #C26112;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Credentials */
+.credentials-section {
+    margin-bottom: 2rem;
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.credential-item {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    transition: border-color 0.25s ease;
+}
+
+.credential-item:hover {
+    border-color: #C26112;
+}
+
+.credential-item h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+
+.credential-item p {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Expertise Page Responsive */
+@media (max-width: 768px) {
+    .expertise-headline {
+        font-size: 1.7rem;
+    }
+
+    .slicer-row {
+        gap: 0.4rem;
+    }
+
+    .slicer-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.75rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .expertise-card {
+        padding: 1rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .tech-card {
+        padding: 1rem;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .credential-item {
+        padding: 1rem 0.75rem;
+    }
+
+    .global-footprint {
+        gap: 0.75rem;
+    }
+
+    .footprint-country {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-headline {
+        font-size: 1.4rem;
+    }
+
+    .slicer-btn {
+        padding: 0.35rem 0.8rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* ==========================================================================
+   HOME PAGE — CLICKABLE METRIC BOXES + DETAIL SECTIONS
+   ========================================================================== */
+
+/* Larger tagline text */
+.tagline-text-stamp.tagline-large {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.6;
+}
+
+/* Make ledger items clickable with cursor */
+.ledger-data-item {
+    cursor: pointer;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.ledger-data-item:hover {
+    border-color: #C26112;
+    box-shadow: 0 4px 20px rgba(194, 97, 18, 0.15);
+    transform: translateY(-2px);
+}
+
+.ledger-data-item:hover h3 {
+    color: #ffffff;
+}
+
+.ledger-data-item:hover p {
+    color: #C26112;
+}
+
+/* Detail Sections Container */
+.detail-sections-container {
+    margin-bottom: 3rem;
+}
+
+/* Individual Detail Section */
+.detail-section {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.75rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    scroll-margin-top: 2rem;
+}
+
+.detail-section:hover {
+    border-color: #C26112;
+}
+
+/* Highlight pulse when scrolled to */
+.detail-section.highlight-pulse {
+    border-color: #C26112;
+    box-shadow: 0 4px 25px rgba(194, 97, 18, 0.2);
+    animation: pulse-border 1.5s ease-out;
+}
+
+@keyframes pulse-border {
+    0% { box-shadow: 0 4px 25px rgba(194, 97, 18, 0.3); }
+    100% { box-shadow: 0 4px 25px rgba(194, 97, 18, 0.05); }
+}
+
+.detail-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.3px;
+}
+
+.detail-section p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   CONNECT PAGE — FULL WIDTH SUBLINE
+   ========================================================================== */
+
+.connect-subline-full {
+    max-width: 100% !important;
+    width: 100%;
+}
+
+/* Responsive for detail sections and tagline */
+@media (max-width: 768px) {
+    .tagline-text-stamp.tagline-large {
+        font-size: 0.9rem;
+        letter-spacing: 1.5px;
+    }
+
+    .detail-section {
+        padding: 1.25rem;
+    }
+
+    .detail-section h3 {
+        font-size: 1rem;
+    }
+
+    .detail-section p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline-text-stamp.tagline-large {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* ==========================================================================
+   HOMEPAGE HERO COMPACT — 2-LINE FIT WITH BREATHING ROOM
+   ========================================================================== */
+
+h2.hero-pitch-title.hero-pitch-compact {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+
+/* Responsive for hero compact */
+@media (max-width: 768px) {
+    h2.hero-pitch-title.hero-pitch-compact {
+        font-size: 1.05rem;
+        line-height: 1.45;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2.hero-pitch-title.hero-pitch-compact {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+}
