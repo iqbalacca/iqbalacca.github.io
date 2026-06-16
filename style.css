@@ -1370,3 +1370,16 @@ h2.hero-pitch-title.hero-pitch-compact {
         margin-bottom: 2rem;
     }
 }
+
+
+/* ==========================================================================
+   EXPERTISE PAGE — FILTER TRANSITIONS
+   ========================================================================== */
+
+[data-filter] {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+[data-filter].hidden {
+    display: none !important;
+}
