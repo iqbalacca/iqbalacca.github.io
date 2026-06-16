@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -79,31 +80,31 @@
                 </div>
             </div>
 
-            <!-- REFINING 5-CARD LEDGER GRID WITH UPGRADED DESCRIPTORS — CLICKABLE ANCHORS -->
+            <!-- REFINING 5-CARD LEDGER GRID WITH UPGRADED DESCRIPTORS -->
             <div class="ledger-row-grid">
-                <a href="#cross-border" class="ledger-data-item ledger-clickable">
+                <div class="ledger-data-item" onclick="scrollToSection('cross-border')">
                     <h3>$17.5M</h3>
                     <p>Capital<br>Raised</p>
-                </a>
-                <a href="#regulated-governance" class="ledger-data-item ledger-clickable">
+                </div>
+                <div class="ledger-data-item" onclick="scrollToSection('regulated-governance')">
                     <h3>Regulated</h3>
                     <p>Finance<br>Officer</p>
-                </a>
-                <a href="#branch-economics" class="ledger-data-item ledger-clickable">
+                </div>
+                <div class="ledger-data-item" onclick="scrollToSection('branch-economics')">
                     <h3>AED 4.5M</h3> 
                     <p>EBITDA<br>Improvement</p>
-                </a>
-                <a href="#cash-flow" class="ledger-data-item ledger-clickable">
+                </div>
+                <div class="ledger-data-item" onclick="scrollToSection('cash-flow')">
                     <h3>AED 3M</h3>
                     <p>Operating<br>Liquidity</p>
-                </a>
-                <a href="#marketplace-infra" class="ledger-data-item ledger-clickable">
+                </div>
+                <div class="ledger-data-item" onclick="scrollToSection('marketplace-infra')">
                     <h3>4 Markets</h3> 
                     <p>Live<br>Infrastructure</p> 
-                </a>
+                </div>
             </div>
 
-            <!-- DETAIL SECTIONS — SCROLL TARGETS -->
+            <!-- DETAIL SECTIONS -->
             <div class="detail-sections-container">
 
                 <section id="cross-border" class="detail-section">
@@ -143,18 +144,14 @@
     </main>
 
     <script>
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    target.classList.add('highlight-pulse');
-                    setTimeout(() => target.classList.remove('highlight-pulse'), 1500);
-                }
-            });
-        });
+        function scrollToSection(id) {
+            const target = document.getElementById(id);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                target.classList.add('highlight-pulse');
+                setTimeout(() => target.classList.remove('highlight-pulse'), 1500);
+            }
+        }
     </script>
 
 </body>
