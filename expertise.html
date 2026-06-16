@@ -32,15 +32,15 @@
 
             <!-- Slicer / Filter Buttons -->
             <div class="slicer-row">
-                <button class="slicer-btn active">All</button>
-                <button class="slicer-btn">Domains</button>
-                <button class="slicer-btn">Technical</button>
-                <button class="slicer-btn">Global</button>
-                <button class="slicer-btn">Credentials</button>
+                <button class="slicer-btn active" onclick="filterSections('all')">All</button>
+                <button class="slicer-btn" onclick="filterSections('domains')">Domains</button>
+                <button class="slicer-btn" onclick="filterSections('technical')">Technical</button>
+                <button class="slicer-btn" onclick="filterSections('global')">Global</button>
+                <button class="slicer-btn" onclick="filterSections('credentials')">Credentials</button>
             </div>
 
             <!-- Domain Expertise Grid -->
-            <div class="expertise-grid">
+            <div class="expertise-grid" data-filter="domains">
 
                 <div class="expertise-card">
                     <h3>Regulatory & Compliance</h3>
@@ -127,7 +127,7 @@
             </div>
 
             <!-- Technical Stack -->
-            <div class="tech-section section-spaced">
+            <div class="tech-section section-spaced" data-filter="technical">
                 <div class="section-header-compact">
                     <h2>Skills and Tools</h2>
                 </div>
@@ -152,7 +152,7 @@
             </div>
 
             <!-- Credentials -->
-            <div class="credentials-section section-spaced">
+            <div class="credentials-section section-spaced" data-filter="credentials">
                 <div class="section-header-compact">
                     <h2>Credentials</h2>
                 </div>
@@ -181,7 +181,7 @@
             </div>
 
             <!-- Global Exposure -->
-            <div class="global-section section-spaced">
+            <div class="global-section section-spaced" data-filter="global">
                 <div class="section-header-compact">
                     <h2>Global Footprint</h2>
                 </div>
@@ -203,5 +203,24 @@
         </div>
     </main>
 
+    <script>
+        function filterSections(filter) {
+            // Update active button
+            document.querySelectorAll('.slicer-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Show/hide sections
+            const sections = document.querySelectorAll('[data-filter]');
+            sections.forEach(section => {
+                if (filter === 'all' || section.dataset.filter === filter) {
+                    section.style.display = '';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
