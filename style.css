@@ -881,3 +881,235 @@ li { margin-bottom: 0.6rem; }
         top: 1.25rem;
     }
 }
+
+
+/* ==========================================================================
+   EXPERTISE PAGE — DOMAIN EXPERTISE ARCHITECTURE
+   ========================================================================== */
+
+.expertise-panel {
+    padding: 2rem 0;
+}
+
+.expertise-overline {
+    color: #C26112;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.expertise-headline {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.expertise-subline {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    max-width: 640px;
+    margin: 0 0 3rem 0;
+}
+
+/* Domain Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.expertise-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.75rem;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.expertise-card:hover {
+    border-color: #C26112;
+    box-shadow: 0 8px 30px rgba(194, 97, 18, 0.08);
+}
+
+.expertise-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.expertise-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.expertise-card ul li {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.expertise-card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #C26112;
+    font-weight: 700;
+}
+
+/* Section Divider */
+.section-divider {
+    border-top: 1px solid #3d3d45;
+    margin: 3rem 0;
+}
+
+/* Technical Literacy Grid */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tech-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.5rem;
+    transition: border-color 0.25s ease;
+}
+
+.tech-card:hover {
+    border-color: #C26112;
+}
+
+.tech-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.tech-card p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Global Footprint */
+.global-footprint {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.footprint-country {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.footprint-dot {
+    color: #C26112;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Credentials Grid */
+.credentials-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.credential-item {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    transition: border-color 0.25s ease;
+}
+
+.credential-item:hover {
+    border-color: #C26112;
+}
+
+.credential-item h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.4rem;
+}
+
+.credential-item p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Expertise Page Responsive */
+@media (max-width: 768px) {
+    .expertise-headline {
+        font-size: 1.7rem;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .expertise-card {
+        padding: 1.25rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .global-footprint {
+        gap: 0.75rem;
+    }
+
+    .footprint-country {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .credentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise-headline {
+        font-size: 1.4rem;
+    }
+}
