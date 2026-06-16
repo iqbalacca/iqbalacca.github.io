@@ -148,6 +148,7 @@ body {
     letter-spacing: 0.3px;
     line-height: 1;
 }
+
 /* Contact strip links */
 .horizontal-contact-strip a {
     color: #cbd5e1;
@@ -158,7 +159,6 @@ body {
 .horizontal-contact-strip a:hover {
     color: #C26112;
 }
-
 
 /* REFINED HEADLINE: Reduced font size and forced standard non-caps casing text transform rules */
 h2.hero-pitch-title {
@@ -370,7 +370,7 @@ li { margin-bottom: 0.6rem; }
     background-color: #1A1A1D; 
     border: 1px solid #36363B; 
     border-radius: 6px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     overflow: hidden;
     width: 100%;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -387,7 +387,7 @@ li { margin-bottom: 0.6rem; }
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem;
+    padding: 1.25rem 1.75rem;
     cursor: pointer;
     background-color: #1A1A1D;
     list-style: none; 
@@ -464,16 +464,16 @@ li { margin-bottom: 0.6rem; }
 
 /* Inside Expanded Content Formatting Layouts */
 .accordion-content {
-    padding: 0 2rem 2rem 2rem;
+    padding: 0 1.75rem 1.5rem 1.75rem;
     background-color: #1A1A1D;
     text-align: left;
 }
 
 /* Separator Row for metadata context */
 .company-context-row {
-    margin-bottom: 1.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     border-top: 1px solid #2b2b30;
     border-bottom: 1px dashed #2b2b30;
 }
@@ -489,7 +489,7 @@ li { margin-bottom: 0.6rem; }
     letter-spacing: 0.5px;
     padding: 0.35rem 0.75rem;
     border-radius: 4px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     margin-right: 0.5rem;
 }
 
@@ -501,16 +501,16 @@ li { margin-bottom: 0.6rem; }
 }
 
 .experience-bullets {
-    margin: 0 0 1.5rem 1.25rem;
+    margin: 0 0 1.25rem 1.25rem;
     padding: 0;
-    list-style-type: disc;
+    list-style-type: square;
 }
 
 .experience-bullets li {
     font-size: 0.95rem;
     color: #cbd5e1;
     line-height: 1.7;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 .experience-bullets li strong {
@@ -553,25 +553,10 @@ li { margin-bottom: 0.6rem; }
     width: 100%;
 }
 
-.timeline-instruction-note {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    text-align: center;
-    margin: 2rem 0 1.5rem 0;
-    padding: 1rem;
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-}
-
-.timeline-instruction-note strong {
-    color: #C26112;
-}
-
 .timeline-footer-action {
     display: flex;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
