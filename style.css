@@ -1383,3 +1383,361 @@ h2.hero-pitch-title.hero-pitch-compact {
 [data-filter].hidden {
     display: none !important;
 }
+
+
+/* ==========================================================================
+   EXPERIENCE PAGE — HYBRID VERTICAL TIMELINE
+   ========================================================================== */
+
+.timeline-container {
+    max-width: 950px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.timeline-header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #3d3d45;
+    padding-bottom: 1.25rem;
+}
+
+.timeline-header h1 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+}
+
+/* Timeline Track */
+.timeline-track {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #2B282B;
+}
+
+/* Timeline Node */
+.timeline-node {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-node:last-child {
+    margin-bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 1.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #36363B;
+    border: 2px solid #36363B;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.timeline-dot.active-dot {
+    background-color: #C26112;
+    border-color: #C26112;
+    box-shadow: 0 0 0 4px rgba(194, 97, 18, 0.2);
+}
+
+/* Timeline Card */
+.timeline-card {
+    background-color: #1A1A1D;
+    border: 1px solid #36363B;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-card:hover {
+    border-color: #C26112;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-card.expanded {
+    border-color: #C26112;
+    box-shadow: 0 4px 20px rgba(194, 97, 18, 0.08);
+}
+
+/* Card Header */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem 1.75rem;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.header-left {
+    flex: 1;
+    text-align: left;
+    min-width: 0;
+}
+
+.header-right {
+    text-align: right;
+    margin-left: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.25rem;
+}
+
+.role-title {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin: 0 0 0.3rem 0;
+    font-weight: 600;
+}
+
+.company-name {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin: 0;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.timeline-location {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.expand-icon {
+    font-size: 1.4rem;
+    color: #94a3b8;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.timeline-card:hover .expand-icon,
+.timeline-card.expanded .expand-icon {
+    color: #C26112;
+}
+
+/* Industry Badges */
+.industry-badge {
+    display: inline-block;
+    background-color: transparent;
+    color: #C26112;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    border: 1px solid #C26112;
+    white-space: nowrap;
+}
+
+/* Card Detail (Accordion Content) */
+.card-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+    padding: 0 1.75rem;
+}
+
+.timeline-card.expanded .card-detail {
+    padding: 0 1.75rem 1.5rem 1.75rem;
+}
+
+/* Company Context */
+.company-context {
+    margin-bottom: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-top: 1px solid #2b2b30;
+    border-bottom: 1px dashed #2b2b30;
+}
+
+.company-desc {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Experience Bullets */
+.experience-bullets {
+    margin: 0 0 1.25rem 1.25rem;
+    padding: 0;
+    list-style-type: square;
+}
+
+.experience-bullets li {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.7;
+    margin-bottom: 0.6rem;
+}
+
+.experience-bullets li strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Skill Pills */
+.skill-pill-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.skill-pill {
+    background-color: transparent;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid #36363B;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.skill-pill:hover {
+    border-color: #C26112;
+    color: #C26112;
+}
+
+/* Timeline Footer */
+.timeline-footer-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-container {
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .timeline-track {
+        padding-left: 1.5rem;
+    }
+
+    .timeline-dot {
+        left: -1.5rem;
+        width: 10px;
+        height: 10px;
+        transform: translateX(-4px);
+    }
+
+    .card-header {
+        padding: 1.25rem 1.25rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .header-right {
+        text-align: left;
+        margin-left: 0;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+
+    .expand-icon {
+        position: absolute;
+        right: 1.25rem;
+        top: 1.5rem;
+        margin-top: 0;
+    }
+
+    .timeline-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .role-title {
+        font-size: 1.05rem;
+    }
+
+    .company-name {
+        font-size: 0.85rem;
+    }
+
+    .timeline-date,
+    .timeline-location {
+        font-size: 0.8rem;
+    }
+
+    .card-detail {
+        padding: 0 1.25rem;
+    }
+
+    .timeline-card.expanded .card-detail {
+        padding: 0 1.25rem 1.5rem 1.25rem;
+    }
+
+    .experience-bullets {
+        margin-left: 1rem;
+    }
+
+    .experience-bullets li {
+        font-size: 0.9rem;
+    }
+
+    .skill-pill {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .timeline-footer-action {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-track {
+        padding-left: 1.25rem;
+    }
+
+    .timeline-dot {
+        left: -1.25rem;
+        transform: translateX(-3px);
+    }
+
+    .industry-badge {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .company-name {
+        gap: 0.3rem;
+    }
+}
