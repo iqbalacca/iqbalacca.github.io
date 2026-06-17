@@ -1,1774 +1,291 @@
-/* ==========================================================================
-   MASTER EXECUTIVE STYLE SHEET - REFINED INSTITUTIONAL COCKPIT LAYOUT
-   ========================================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'IBM Plex Sans', sans-serif;
-}
-
-/* Charcoal Black Full Page Canvas (#2B2B2B) */
-body {
-    background-color: #2B2B2B;
-    color: #F4F3EF; 
-    letter-spacing: -0.1px;
-    min-height: 100vh;
-}
-
-/* Centered Top Menu Navigation Bar */
-.navbar {
-    background-color: #1A1A1D; 
-    color: #ffffff;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 1.4rem 3rem;
-    border-bottom: 1px solid #36363B;
-}
-
-.logo {
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    font-size: 1.1rem;
-    justify-self: start;
-}
-
-.nav-links {
-    justify-self: center;
-}
-
-.nav-links a {
-    color: #94a3b8;
-    text-decoration: none;
-    margin: 0 1.5rem;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-}
-
-.nav-links a.active, .nav-links a:hover {
-    color: #C26112;
-    font-weight: 600;
-}
-
-/* Widescreen Dashboard Master Workspace Framework */
-.cockpit-container {
-    max-width: 1250px;
-    margin: 4rem auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 200px 1fr; 
-    gap: 4.5rem;
-    width: 100%;
-}
-
-/* Left Column Profile Card Anchor Box */
-.cockpit-left-anchor {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 0.85rem; 
-}
-
-.cockpit-profile-img {
-    width: 100%;
-    height: 200px;
-    border-radius: 6px; 
-    object-fit: cover;
-    border: 1px solid #3d3d45;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    filter: brightness(0.65) contrast(0.85); 
-    display: block;
-}
-
-/* Cohesive Badge Stack Components */
-.badge-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem; 
-    width: 100%;
-}
-
-.badge-tag {
-    background-color: #1A1A1D;
-    color: #ffffff;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 0.4rem;
-    border-radius: 4px;
-    text-align: center;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    border: 1px solid #C26112; 
-}
-
-/* Left Column Text: Clean Left-Aligned Philosophy Tagline Block */
-.tagline-container-block {
-    padding: 0.5rem 0 0 0.25rem;
-    width: 100%;
-    text-align: left;
-}
-
-.tagline-text-stamp {
-    color: #C26112;
-    font-size: 0.75rem; 
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    line-height: 1.45; 
-}
-
-/* Right Main Institutional Data Sheet Section */
-.cockpit-main-ledger {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Widescreen Horizontal Top Contact Strip Row */
-.executive-widescreen-header {
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #3d3d45;
-    padding-bottom: 1.25rem;
-}
-
-.executive-widescreen-header h1 {
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    margin-bottom: 0.6rem;
-}
-
-.horizontal-contact-strip {
-    font-size: 0.95rem;
-    color: #cbd5e1; 
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    line-height: 1;
-}
-
-/* Contact strip links */
-.horizontal-contact-strip a {
-    color: #cbd5e1;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.horizontal-contact-strip a:hover {
-    color: #C26112;
-}
-
-/* REFINED HEADLINE: Reduced font size and forced standard non-caps casing text transform rules */
-h2.hero-pitch-title {
-    font-size: 1.35rem; 
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.1px;
-    line-height: 1.4;
-    text-transform: none !important; 
-}
-
-p.hero-sub-pitch {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #a1a1aa;
-    margin-bottom: 2.5rem;
-    line-height: 1.5;
-}
-
-h2.section-header-line {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #94a3b8;
-    margin-bottom: 1.25rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #3d3d45;
-    padding-bottom: 0.5rem;
-}
-
-/* Broken Up Columns for Professional Summary */
-.summary-columns-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
-}
-
-.summary-column-item {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: #cbd5e1;
-}
-
-.summary-column-item strong {
-    color: #ffffff;
-    display: block;
-    margin-bottom: 0.4rem;
-    font-size: 0.95rem; 
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-}
-
-/* STATS SECTION GRID STRUCTURE */
-.ledger-row-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    gap: 1.5rem;
-    border-top: 1px solid #3d3d45;
-    border-bottom: 1px solid #3d3d45;
-    padding: 2rem 0;
-    margin-bottom: 3rem;
-}
-
-.ledger-data-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.ledger-data-item h3 {
-    color: #C26112; 
-    font-size: 1.65rem; 
-    font-weight: 700;
-    margin-bottom: 0.4rem;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap; 
-}
-
-.ledger-data-item p {
-    font-size: 0.66rem; 
-    font-weight: 500;   
-    color: #94a3b8; 
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.6;   
-}
-
-/* Twin Interactive Call Buttons Layout row */
-.dual-action-row {
-    display: flex;
-    gap: 1.5rem;
-}
-
-.btn-primary {
-    background-color: #C26112;
-    color: #ffffff;
-    padding: 0.9rem 2.2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color 0.2s ease;
-    text-align: center;
-}
-
-.btn-primary:hover {
-    background-color: #a4510d;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    padding: 0.9rem 2.2rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    border: 1px solid #44444a;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-    text-align: center;
-}
-
-.btn-secondary:hover {
-    background-color: #1A1A1D;
-    border-color: #ffffff;
-}
-
-/* Shared Central Sheets for Experience / Expertise sub pages */
-.main-wrapper {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 1.5rem;
-    width: 100%;
-}
-
-.executive-panel {
-    width: 100%;
-    padding: 1rem 0;
-}
-
-h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-ul {
-    margin-left: 1.5rem;
-    line-height: 1.8;
-    color: #cbd5e1;
-    font-size: 1.05rem;
-}
-
-li { margin-bottom: 0.6rem; }
-
-/* Contact Details Page Panel custom tweaks */
-.contact-grid-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin: 2.5rem 0;
-}
-.info-card-panel {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    padding: 1.75rem;
-    border-radius: 6px;
-    text-align: center;
-}
-.info-card-panel h4 {
-    color: #94a3b8;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-.info-card-panel p, .info-card-panel a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 1.05rem;
-    text-decoration: none;
-}
-
-/* ==========================================================================
-   DARK INSTITUTIONAL TIMELINE ACCORDION BREAKOUT (EXPERIENCE PAGE)
-   ========================================================================== */
-
-/* Override the 2-column grid to make the experience ledger full width */
-.cockpit-container.full-width-layout {
-    display: block; 
-    max-width: 950px; 
-    margin: 4rem auto;
-    padding: 0 2rem;
-    width: 100%;
-}
-
-.cockpit-container.full-width-layout .cockpit-main-ledger {
-    width: 100%;
-}
-
-/* Premium Interactive Dark Accordion Container */
-.timeline-accordion-item {
-    background-color: #1A1A1D; 
-    border: 1px solid #36363B; 
-    border-radius: 6px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    width: 100%;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Highlight the active item when a recruiter expands it */
-.timeline-accordion-item[open] {
-    border-color: #C26112; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Interactive Summary Header Customization */
-.accordion-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 1.75rem;
-    cursor: pointer;
-    background-color: #1A1A1D;
-    list-style: none; 
-    user-select: none;
-    position: relative;
-}
-
-.accordion-header::-webkit-details-marker {
-    display: none; 
-}
-
-/* Custom indicator symbol styling (+ / -) */
-.accordion-header::after {
-    content: '+';
-    font-size: 1.4rem;
-    color: #94a3b8;
-    font-weight: 400;
-    margin-left: 1.5rem;
-    transition: transform 0.2s ease;
-    flex-shrink: 0;
-    min-width: 20px;
-    text-align: center;
-}
-
-.timeline-accordion-item[open] .accordion-header::after {
-    content: '−';
-    color: #C26112;
-}
-
-.accordion-header:hover {
-    background-color: #222226; 
-}
-
-/* Typography positioning inside headers */
-.header-main-info {
-    flex: 1;
-    text-align: left;
-    min-width: 0;
-}
-
-.header-main-info .role-title {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin: 0 0 0.3rem 0;
-    font-weight: 600;
-}
-
-.header-main-info .company-sub {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    margin: 0;
-    font-weight: 500;
-}
-
-.header-meta-info {
-    text-align: right;
-    margin-left: 2rem;
-    flex-shrink: 0;
-}
-
-.header-meta-info .timeline-date {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.header-meta-info .timeline-location {
-    display: block;
-    font-size: 0.85rem;
-    color: #94a3b8;
-    margin-top: 0.25rem;
-}
-
-/* Inside Expanded Content Formatting Layouts */
-.accordion-content {
-    padding: 0 1.75rem 1.5rem 1.75rem;
-    background-color: #1A1A1D;
-    text-align: left;
-}
-
-/* Separator Row for metadata context */
-.company-context-row {
-    margin-bottom: 1.25rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-top: 1px solid #2b2b30;
-    border-bottom: 1px dashed #2b2b30;
-}
-
-/* Context Badges formatting */
-.industry-badge {
-    display: inline-block;
-    background-color: #C26112;
-    color: #1A1A1D;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.35rem 0.75rem;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
-    margin-right: 0.5rem;
-}
-
-.company-desc {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.65;
-    margin: 0;
-}
-
-.experience-bullets {
-    margin: 0 0 1.25rem 1.25rem;
-    padding: 0;
-    list-style-type: square;
-}
-
-.experience-bullets li {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.7;
-    margin-bottom: 0.6rem;
-}
-
-.experience-bullets li strong {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-.skill-pill-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-}
-
-.skill-pill {
-    background-color: transparent;
-    color: #94a3b8;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.4rem 0.9rem;
-    border: 1px solid #36363B;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.skill-pill:hover {
-    border-color: #C26112;
-    color: #C26112;
-}
-
-.fractional-tag {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #94a3b8;
-    margin-left: 0.5rem;
-}
-
-.timeline-container {
-    width: 100%;
-}
-
-.timeline-footer-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-/* ==========================================================================
-   CONNECT PAGE — WORLD-CLASS CONTACT ARCHITECTURE
-   ========================================================================== */
-
-.connect-panel {
-    text-align: left;
-    padding: 2rem 0;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.connect-overline {
-    color: #C26112;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.connect-headline {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    margin-bottom: 1.25rem;
-    line-height: 1.2;
-}
-
-.connect-subline {
-    font-size: 1.05rem;
-    color: #94a3b8;
-    line-height: 1.7;
-    max-width: 640px;
-    margin: 0 0 3rem 0;
-}
-
-/* Contact Card Matrix */
-.contact-matrix-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    max-width: 900px;
-    margin: 0 0 2.5rem 0;
-}
-
-.contact-data-card {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    padding: 1.5rem 1rem;
-    text-align: left;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.4rem;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-    cursor: pointer;
-}
-
-.contact-data-card:hover {
-    border-color: #C26112;
-    box-shadow: 0 8px 30px rgba(194, 97, 18, 0.08);
-    transform: translateY(-2px);
-}
-
-.card-icon {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-    color: #C26112;
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
-}
-
-.contact-data-card:hover .card-icon {
-    opacity: 1;
-}
-
-.card-tag {
-    color: #C26112;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 0;
-}
-
-.card-core-value {
-    color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin: 0;
-    word-break: break-word;
-    line-height: 1.4;
-}
-
-.card-hint {
-    color: #64748b;
-    font-size: 0.75rem;
-    font-weight: 500;
-    margin: 0.15rem 0 0 0;
-}
-
-/* Status Chip Row */
-.status-chip-row {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    border-top: 1px solid #3d3d45;
-    padding-top: 2rem;
-    max-width: 900px;
-    margin: 0;
-}
-
-.status-chip {
-    background-color: #1A1A1D;
-    color: #94a3b8;
-    font-size: 0.8rem;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: 1px solid #36363B;
-    white-space: nowrap;
-}
-
-/* ==========================================================================
-   RESPONSIVE BREAKPOINTS
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    .navbar {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1rem 1.5rem;
-        text-align: center;
-    }
-
-    .logo {
-        justify-self: center;
-    }
-
-    .nav-links {
-        justify-self: center;
-    }
-
-    .nav-links a {
-        margin: 0 0.75rem;
-        font-size: 0.85rem;
-    }
-
-    .cockpit-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
-
-    .cockpit-left-anchor {
-        align-items: center;
-        text-align: center;
-    }
-
-    .cockpit-profile-img {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
-    }
-
-    .tagline-container-block {
-        text-align: center;
-    }
-
-    .executive-widescreen-header h1 {
-        font-size: 1.6rem;
-    }
-
-    .horizontal-contact-strip {
-        font-size: 0.85rem;
-    }
-
-    h2.hero-pitch-title {
-        font-size: 1.15rem;
-    }
-
-    .summary-columns-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .ledger-row-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .dual-action-row {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .btn-primary, .btn-secondary {
-        width: 100%;
-    }
-
-    /* Experience page mobile */
-    .cockpit-container.full-width-layout {
-        padding: 0 1rem;
-        margin: 2rem auto;
-    }
-
-    .accordion-header {
-        padding: 1.25rem 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .accordion-header::after {
-        position: absolute;
-        right: 1.25rem;
-        top: 1.5rem;
-        font-size: 1.6rem;
-        color: #C26112;
-    }
-
-    .header-meta-info {
-        text-align: left;
-        margin-left: 0;
-        display: flex;
-        gap: 0.75rem;
-        align-items: center;
-    }
-
-    .header-meta-info .timeline-date,
-    .header-meta-info .timeline-location {
-        display: inline;
-        font-size: 0.8rem;
-    }
-
-    .accordion-content {
-        padding: 0 1.25rem 1.5rem 1.25rem;
-    }
-
-    .ledger-data-item h3 {
-        font-size: 1.35rem;
-    }
-
-    /* Connect page mobile */
-    .connect-headline {
-        font-size: 1.7rem;
-    }
-
-    .connect-subline {
-        font-size: 0.95rem;
-    }
-
-    .contact-matrix-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        padding: 0;
-    }
-
-    .contact-data-card {
-        padding: 1.25rem 0.875rem;
-    }
-
-    .card-core-value {
-        font-size: 0.85rem;
-    }
-
-    .status-chip-row {
-        gap: 0.6rem;
-        padding-top: 1.5rem;
-    }
-
-    .status-chip {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .ledger-row-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ledger-data-item h3 {
-        font-size: 1.5rem;
-    }
-
-    .header-main-info .role-title {
-        font-size: 1.05rem;
-    }
-
-    .header-main-info .company-sub {
-        font-size: 0.85rem;
-    }
-
-    .skill-pill-group {
-        gap: 0.4rem;
-    }
-
-    .skill-pill {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .contact-matrix-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .connect-headline {
-        font-size: 1.4rem;
-    }
-
-    .accordion-header::after {
-        font-size: 1.8rem;
-        top: 1.25rem;
-    }
-}
-
-
-
-
-/* ==========================================================================
-   EXPERTISE PAGE — SLICER + COMPACT LAYOUT
-   ========================================================================== */
-
-.expertise-panel {
-    padding: 2rem 0;
-}
-
-.expertise-overline {
-    color: #C26112;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-}
-
-.expertise-headline {
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-    margin-bottom: 1.25rem;
-    line-height: 1.2;
-}
-
-.expertise-subline {
-    font-size: 1.05rem;
-    color: #94a3b8;
-    line-height: 1.7;
-    margin: 0 0 2rem 0;
-    white-space: nowrap;
-}
-
-/* Slicer / Filter Buttons */
-.slicer-row {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
-}
-
-.slicer-btn {
-    background-color: transparent;
-    color: #94a3b8;
-    border: 1px solid #36363B;
-    padding: 0.5rem 1.25rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.slicer-btn:hover {
-    border-color: #C26112;
-    color: #C26112;
-}
-
-.slicer-btn.active {
-    background-color: #C26112;
-    color: #ffffff;
-    border-color: #C26112;
-}
-
-/* Domain Expertise Grid */
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.expertise-card {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    padding: 1.25rem;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.expertise-card:hover {
-    border-color: #C26112;
-    box-shadow: 0 8px 30px rgba(194, 97, 18, 0.08);
-}
-
-.expertise-card h3 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.3px;
-}
-
-.expertise-card ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.expertise-card ul li {
-    font-size: 0.85rem;
-    color: #94a3b8;
-    line-height: 1.55;
-    margin-bottom: 0.4rem;
-    padding-left: 0.9rem;
-    position: relative;
-}
-
-.expertise-card ul li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    color: #C26112;
-    font-weight: 700;
-}
-
-/* Section Header Compact */
-.section-header-compact {
-    margin-bottom: 1rem;
-}
-
-.section-header-compact h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #94a3b8;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin: 0;
-}
-
-/* Technical Stack */
-.tech-section {
-    margin-bottom: 2rem;
-}
-
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-}
-
-.tech-card {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    padding: 1.25rem;
-    transition: border-color 0.25s ease;
-}
-
-.tech-card:hover {
-    border-color: #C26112;
-}
-
-.tech-card h4 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.4rem;
-}
-
-.tech-card p {
-    font-size: 0.8rem;
-    color: #94a3b8;
-    line-height: 1.5;
-    margin: 0;
-}
-
-/* Global Exposure */
-.global-section {
-    margin-bottom: 2rem;
-}
-
-.global-footprint {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.footprint-country {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.footprint-dot {
-    color: #C26112;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-/* Credentials */
-.credentials-section {
-    margin-bottom: 2rem;
-}
-
-.credentials-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-}
-
-.credential-item {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    padding: 1.25rem 1rem;
-    text-align: center;
-    transition: border-color 0.25s ease;
-}
-
-.credential-item:hover {
-    border-color: #C26112;
-}
-
-.credential-item h4 {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.3rem;
-}
-
-.credential-item p {
-    font-size: 0.75rem;
-    color: #94a3b8;
-    margin: 0;
-    line-height: 1.4;
-}
-
-/* Expertise Page Responsive */
-@media (max-width: 768px) {
-    .expertise-headline {
-        font-size: 1.7rem;
-    }
-
-    .slicer-row {
-        gap: 0.4rem;
-    }
-
-    .slicer-btn {
-        padding: 0.4rem 1rem;
-        font-size: 0.75rem;
-    }
-
-    .expertise-grid {
-        grid-template-columns: 1fr;
-        gap: 0.75rem;
-    }
-
-    .expertise-card {
-        padding: 1rem;
-    }
-
-    .tech-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.75rem;
-    }
-
-    .tech-card {
-        padding: 1rem;
-    }
-
-    .credentials-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 0.75rem;
-    }
-
-    .credential-item {
-        padding: 1rem 0.75rem;
-    }
-
-    .global-footprint {
-        gap: 0.75rem;
-    }
-
-    .footprint-country {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .credentials-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .expertise-headline {
-        font-size: 1.4rem;
-    }
-
-    .slicer-btn {
-        padding: 0.35rem 0.8rem;
-        font-size: 0.7rem;
-    }
-}
-
-/* ==========================================================================
-   HOME PAGE — CLICKABLE METRIC BOXES + DETAIL SECTIONS
-   ========================================================================== */
-
-/* Larger tagline text */
-.tagline-text-stamp.tagline-large {
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    line-height: 1.6;
-}
-
-/* Make ledger items clickable with cursor */
-.ledger-data-item {
-    cursor: pointer;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    padding: 0.5rem;
-}
-
-.ledger-data-item:hover {
-    border-color: #C26112;
-    box-shadow: 0 4px 20px rgba(194, 97, 18, 0.15);
-    transform: translateY(-2px);
-}
-
-.ledger-data-item:hover h3 {
-    color: #ffffff;
-}
-
-.ledger-data-item:hover p {
-    color: #C26112;
-}
-
-/* Detail Sections Container */
-.detail-sections-container {
-    margin-bottom: 3rem;
-}
-
-/* Individual Detail Section */
-.detail-section {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    padding: 1.75rem;
-    margin-bottom: 1rem;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-    scroll-margin-top: 2rem;
-}
-
-.detail-section:hover {
-    border-color: #C26112;
-}
-
-/* Highlight pulse when scrolled to */
-.detail-section.highlight-pulse {
-    border-color: #C26112;
-    box-shadow: 0 4px 25px rgba(194, 97, 18, 0.2);
-    animation: pulse-border 1.5s ease-out;
-}
-
-@keyframes pulse-border {
-    0% { box-shadow: 0 4px 25px rgba(194, 97, 18, 0.3); }
-    100% { box-shadow: 0 4px 25px rgba(194, 97, 18, 0.05); }
-}
-
-.detail-section h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.3px;
-}
-
-.detail-section p {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.7;
-    margin: 0;
-}
-
-/* ==========================================================================
-   CONNECT PAGE — FULL WIDTH SUBLINE
-   ========================================================================== */
-
-.connect-subline-full {
-    max-width: 100% !important;
-    width: 100%;
-}
-
-/* Responsive for detail sections and tagline */
-@media (max-width: 768px) {
-    .tagline-text-stamp.tagline-large {
-        font-size: 0.9rem;
-        letter-spacing: 1.5px;
-    }
-
-    .detail-section {
-        padding: 1.25rem;
-    }
-
-    .detail-section h3 {
-        font-size: 1rem;
-    }
-
-    .detail-section p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .tagline-text-stamp.tagline-large {
-        font-size: 0.8rem;
-        letter-spacing: 1px;
-    }
-}
-
-
-/* ==========================================================================
-   HOMEPAGE HERO COMPACT — 2-LINE FIT WITH BREATHING ROOM
-   ========================================================================== */
-
-h2.hero-pitch-title.hero-pitch-compact {
-    font-size: 1.15rem;
-    line-height: 1.5;
-    margin-bottom: 2.5rem;
-}
-
-/* Responsive for hero compact */
-@media (max-width: 768px) {
-    h2.hero-pitch-title.hero-pitch-compact {
-        font-size: 1.05rem;
-        line-height: 1.45;
-        margin-bottom: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h2.hero-pitch-title.hero-pitch-compact {
-        font-size: 0.95rem;
-        line-height: 1.4;
-        margin-bottom: 1.5rem;
-    }
-}
-
-
-/* ==========================================================================
-   EXPERTISE PAGE — LEFT-ALIGNED GLOBAL FOOTPRINT
-   ========================================================================== */
-
-.global-footprint-left {
-    justify-content: flex-start !important;
-}
-
-/* Ensure text size is fine as-is — no increase needed */
-/* Current: font-size: 1.1rem on .footprint-country, which is readable */
-
-
-/* ==========================================================================
-   EXPERTISE PAGE — SECTION SPACING
-   ========================================================================== */
-
-.section-spaced {
-    margin-top: 3.5rem;
-}
-
-/* Ensure the last section has bottom breathing room */
-.global-section.section-spaced {
-    margin-bottom: 3rem;
-}
-
-/* Responsive spacing */
-@media (max-width: 768px) {
-    .section-spaced {
-        margin-top: 2.5rem;
-    }
-
-    .global-section.section-spaced {
-        margin-bottom: 2rem;
-    }
-}
-
-
-/* ==========================================================================
-   EXPERTISE PAGE — FILTER TRANSITIONS
-   ========================================================================== */
-
-[data-filter] {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-[data-filter].hidden {
-    display: none !important;
-}
-
-
-/* ==========================================================================
-   EXPERIENCE PAGE — HYBRID VERTICAL TIMELINE
-   ========================================================================== */
-/* ==========================================================================
-   EXPERIENCE PAGE — HYBRID VERTICAL TIMELINE (REFINED)
-   ========================================================================== */
-
-.timeline-container {
-    max-width: 950px;
-    margin: 3rem auto;
-    padding: 0 2rem;
-    width: 100%;
-}
-
-.timeline-header {
-    margin-bottom: 2.5rem;
-    border-bottom: 1px solid #3d3d45;
-    padding-bottom: 1.25rem;
-}
-
-.timeline-header h1 {
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.5px;
-}
-
-/* Timeline Track */
-.timeline-track {
-    position: relative;
-    padding-left: 2rem;
-}
-
-.timeline-track::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #3d3d45;
-}
-
-/* Timeline Node */
-.timeline-node {
-    position: relative;
-    margin-bottom: 1rem;
-}
-
-.timeline-node:last-child {
-    margin-bottom: 0;
-}
-
-/* Timeline Dot */
-.timeline-dot {
-    position: absolute;
-    left: -2rem;
-    top: 1.25rem;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #36363B;
-    border: 2px solid #36363B;
-    transform: translateX(-5px);
-    transition: all 0.3s ease;
-}
-
-.timeline-dot.active-dot {
-    background-color: #C26112;
-    border-color: #C26112;
-    box-shadow: 0 0 0 4px rgba(194, 97, 18, 0.2);
-}
-
-/* Timeline Card */
-.timeline-card {
-    background-color: #1A1A1D;
-    border: 1px solid #36363B;
-    border-radius: 6px;
-    overflow: hidden;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.timeline-card:hover {
-    border-color: #C26112;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.timeline-card.expanded {
-    border-color: #C26112;
-    box-shadow: 0 4px 20px rgba(194, 97, 18, 0.08);
-}
-
-/* Card Header */
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25rem 1.75rem;
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-    min-height: 3.5rem;
-}
-
-.header-left {
-    flex: 1;
-    text-align: left;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.35rem;
-}
-
-.header-right {
-    text-align: right;
-    margin-left: 2rem;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.25rem;
-    position: relative;
-    padding-right: 2rem;
-}
-
-.role-title {
-    font-size: 1.25rem;
-    color: #ffffff;
-    margin: 0;
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-.company-name {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    margin: 0;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.timeline-date {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.timeline-location {
-    font-size: 0.85rem;
-    color: #94a3b8;
-}
-
-.expand-icon {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.6rem;
-    color: #94a3b8;
-    font-weight: 400;
-    transition: color 0.2s ease;
-    line-height: 1;
-}
-
-.timeline-card:hover .expand-icon,
-.timeline-card.expanded .expand-icon {
-    color: #C26112;
-}
-
-/* Industry Badges */
-.industry-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #2b2b30;
-    color: #94a3b8;
-    font-size: 0.65rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.35rem 0.6rem;
-    border-radius: 4px;
-    border: 1px solid #36363B;
-    white-space: nowrap;
-    line-height: 1;
-    vertical-align: middle;
-}
-
-/* Card Detail (Accordion Content) */
-.card-detail {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
-    padding: 0 1.75rem;
-}
-
-.timeline-card.expanded .card-detail {
-    padding: 0 1.75rem 1.5rem 1.75rem;
-}
-
-/* Company Context */
-.company-context {
-    margin-bottom: 1.25rem;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-top: 1px solid #2b2b30;
-    border-bottom: 1px dashed #2b2b30;
-}
-
-.company-desc {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.65;
-    margin: 0;
-}
-
-/* Experience Bullets */
-.experience-bullets {
-    margin: 0 0 1.25rem 1.25rem;
-    padding: 0;
-    list-style-type: square;
-}
-
-.experience-bullets li {
-    font-size: 0.95rem;
-    color: #cbd5e1;
-    line-height: 1.7;
-    margin-bottom: 0.6rem;
-}
-
-.experience-bullets li strong {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-/* Skill Pills */
-.skill-pill-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-}
-
-.skill-pill {
-    background-color: transparent;
-    color: #94a3b8;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.4rem 0.9rem;
-    border: 1px solid #36363B;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.skill-pill:hover {
-    border-color: #C26112;
-    color: #C26112;
-}
-
-/* Timeline Footer */
-.timeline-footer-action {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .timeline-container {
-        padding: 0 1rem;
-        margin: 2rem auto;
-    }
-
-    .timeline-track {
-        padding-left: 1.5rem;
-    }
-
-    .timeline-dot {
-        left: -1.5rem;
-        width: 10px;
-        height: 10px;
-        transform: translateX(-4px);
-        top: 1.15rem;
-    }
-
-    .card-header {
-        padding: 1.25rem 1.25rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        min-height: auto;
-    }
-
-    .header-right {
-        text-align: left;
-        margin-left: 0;
-        align-items: flex-start;
-        flex-direction: row;
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        padding-right: 0;
-        width: 100%;
-    }
-
-    .expand-icon {
-        position: absolute;
-        right: 1.25rem;
-        top: 1.25rem;
-        transform: none;
-        font-size: 1.8rem;
-    }
-
-    .timeline-header h1 {
-        font-size: 1.6rem;
-    }
-
-    .role-title {
-        font-size: 1.05rem;
-    }
-
-    .company-name {
-        font-size: 0.85rem;
-    }
-
-    .timeline-date,
-    .timeline-location {
-        font-size: 0.8rem;
-    }
-
-    .card-detail {
-        padding: 0 1.25rem;
-    }
-
-    .timeline-card.expanded .card-detail {
-        padding: 0 1.25rem 1.5rem 1.25rem;
-    }
-
-    .experience-bullets {
-        margin-left: 1rem;
-    }
-
-    .experience-bullets li {
-        font-size: 0.9rem;
-    }
-
-    .skill-pill {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .timeline-footer-action {
-        margin-top: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline-track {
-        padding-left: 1.25rem;
-    }
-
-    .timeline-dot {
-        left: -1.25rem;
-        transform: translateX(-3px);
-        top: 1.1rem;
-    }
-
-    .industry-badge {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.5rem;
-        height: 1.3rem;
-    }
-
-    .company-name {
-        gap: 0.3rem;
-    }
-
-    .expand-icon {
-        font-size: 1.8rem;
-    }
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Iqbal | Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+<base target="_blank">
+</head>
+<body>
+
+    <!-- Top Corporate Navigation Header -->
+    <header class="navbar">
+        <div class="logo">Muhammad Iqbal, ACCA</div>
+        <nav class="nav-links">
+            <a href="index.html" target="_self">Home</a>
+            <a href="experience.html" class="active" target="_self">Experience</a>
+            <a href="expertise.html" target="_self">Expertise</a>
+            <a href="connect.html" target="_self">Connect</a>
+        </nav>
+    </header>
+
+    <!-- Timeline Container -->
+    <main class="timeline-container">
+
+        <div class="timeline-header">
+            <h1>Professional Experience</h1>
+        </div>
+
+        <!-- Timeline Line -->
+        <div class="timeline-track">
+
+            <!-- Role 1: Finance Director - Haseeb -->
+            <div class="timeline-node active">
+                <div class="timeline-dot active-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Finance Director</h3>
+                            <p class="company-name">Haseeb Accounting & Advisory 
+                                <span class="industry-badge">FIDUCIARY</span>
+                                <span class="industry-badge">REGULATED</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Jan 2025 - Present</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Boutique UAE advisory firm serving DFSA/FSRA-regulated entities. Recently appointed Regulated Finance Officer for multiple Category 3C firms, directing capital adequacy, PIB reporting, IFRS compliance, and regulatory filings.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Directed capital adequacy, liquidity reporting, and EPRS filings for DFSA/FSRA Category 3C entities under IFRS.</li>
+                            <li>Managed Corporate Tax, VAT, excise compliance, and FTA liaison across portfolio entities.</li>
+                            <li>Built financial models and investor data rooms for growth-stage clients; implemented multi-entity FP&A automation.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">DFSA & FSRA</span>
+                            <span class="skill-pill">Capital Adequacy</span>
+                            <span class="skill-pill">IFRS Compliance</span>
+                            <span class="skill-pill">FTA Liaison</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 2: Group Financial Controller - Selfologi -->
+            <div class="timeline-node">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Group Financial Controller</h3>
+                            <p class="company-name">Selfologi Group 
+                                <span class="industry-badge">HEALTHCARE</span>
+                                <span class="industry-badge">E-COMMERCE</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2021 - Nov 2024</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Dubai-based healthcare e-commerce platform enabling digital discovery and booking of cosmetic treatments. Launched in UAE, expanded to KSA, with group holding structures in UK and BVI.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Directed group financial strategy and expansion frameworks for a USD 17.5M venture-backed portfolio across UAE, KSA, UK, and BVI hubs.</li>
+                            <li>Incorporated and operationalized complex legal structures across DMCC and ADGM hubs, managing intercompany controls to clean unqualified audit sign-off.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">Group Treasury</span>
+                            <span class="skill-pill">ADGM & DMCC</span>
+                            <span class="skill-pill">Cross-Border Controls</span>
+                            <span class="skill-pill">Audit Clearance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 3: Head of Finance - Majestic -->
+            <div class="timeline-node">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Head of Finance</h3>
+                            <p class="company-name">Majestic Group 
+                                <span class="industry-badge">LUXURY RETAIL</span>
+                                <span class="industry-badge">HOSPITALITY</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2018 - Aug 2021</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Dubai-based conglomerate operating a 255+ room hotel and a luxury fashion retail chain with 10+ stores and regional e-commerce.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Oversaw corporate finance operations spanning luxury retail (10+ stores, regional e-commerce) and hospitality (255+ room hotel), managing multi-channel working capital cycles.</li>
+                            <li>Optimized multi-channel working capital cycles and centralized commercial cash flows to buffer regional scaling operations.</li>
+                            <li>Managed the launch of the Retail Fashion online sales channel and directed strategic store rationalization, consolidating locations while maintaining cash flow across Dubai and the Northern Emirates.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">Corporate Finance</span>
+                            <span class="skill-pill">Working Capital</span>
+                            <span class="skill-pill">E-commerce Logistics</span>
+                            <span class="skill-pill">Retail Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 4: Head of Finance - Tasheel -->
+            <div class="timeline-node">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Head of Finance</h3>
+                            <p class="company-name">Tasheel 
+                                <span class="industry-badge">SEMI-GOVERNMENT</span>
+                                <span class="industry-badge">MULTI-BRANCH</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2014 - Oct 2018</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Semi-government service center network with 10+ branches across the UAE, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Drove P&L performance for 10+ service centers managing AED 150M+ in annual collections. Restructured loss-making units into profitable entities through cost-per-transaction analysis, site rationalization, and self-funded expansion of 3 new centers with zero external capital.</li>
+                            <li>Established branch-level profitability and unit economics measurement across 6 government agency affiliations, enabling data-driven site decisions and resource allocation.</li>
+                            <li>Managed daily cash reconciliation for AED 150M+ annual collections via G1 system across all centers, ensuring zero discrepancies and timely remittance to ministries.</li>
+                            <li>Navigated VAT uncertainty for service fees while rolling out ERP. Worked directly with government agencies to determine compliance, implemented software, and ensured zero penalties.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">P&L Restructuring</span>
+                            <span class="skill-pill">G1 Cash Systems</span>
+                            <span class="skill-pill">VAT Rollout</span>
+                            <span class="skill-pill">M&A Strategy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 5: Group Finance Manager - aafaq -->
+            <div class="timeline-node">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Group Finance Manager</h3>
+                            <p class="company-name">aafaq Islamic Finance PSC 
+                                <span class="industry-badge">PRIVATE EQUITY</span>
+                                <span class="industry-badge">ISLAMIC FINANCE</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2011 - Aug 2014</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Diversified Islamic investment firm managing 8 portfolio companies across private equity, real estate, F&B, and SME financing.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Owned end-to-end financial consolidation for 8 portfolio companies, managing a diverse asset portfolio and delivering group-level visibility to board and stakeholders.</li>
+                            <li>Built risk verification protocol for equity investments and convertible loan instruments, surfacing discrepancies and hidden liabilities to protect portfolio value.</li>
+                            <li>Verified conversion terms and valuation models for convertible loan instruments, ensuring accurate assessment and full compliance with Islamic finance principles.</li>
+                            <li>Protected portfolio value through continuous financial oversight, establishing audit verification standards ensuring 100% transparency in portfolio company reporting.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">Portfolio Management</span>
+                            <span class="skill-pill">Islamic Finance</span>
+                            <span class="skill-pill">Financial Consolidation</span>
+                            <span class="skill-pill">Risk Auditing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 6: Assistant Manager Finance - DyStar -->
+            <div class="timeline-node">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <h3 class="role-title">Assistant Manager Finance</h3>
+                            <p class="company-name">DyStar Pakistan 
+                                <span class="industry-badge">MANUFACTURING</span>
+                                <span class="industry-badge">RETAIL</span>
+                            </p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Feb 2007 - Sep 2011</span>
+                            <span class="timeline-location">Karachi, Pakistan</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Subsidiary of DyStar GmbH, a global textile dyes manufacturer. Operated as an indenting house and local distribution arm for Pakistani textile mills.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Managed financial reporting and internal controls for a leading textile auxiliaries and dyes chemical manufacturer.</li>
+                            <li>Directed cost accounting and inventory valuation for production cycles, performing variance analysis to control Cost of Goods Sold (COGS) and protect margins.</li>
+                            <li>Handled treasury and trade finance operations, managing banking relationships and liquidity for the firm.</li>
+                            <li>Coordinated with tax authorities and external auditors to ensure full compliance with local regulatory requirements.</li>
+                        </ul>
+                        <div class="skill-pill-group">
+                            <span class="skill-pill">Cost Accounting</span>
+                            <span class="skill-pill">COGS Control</span>
+                            <span class="skill-pill">Treasury Operations</span>
+                            <span class="skill-pill">Regulatory Audit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Action -->
+        <div class="timeline-footer-action">
+            <a href="expertise.html" class="btn-primary" target="_self">View Core Expertise</a>
+        </div>
+
+    </main>
+
+    <script>
+        function toggleCard(header) {
+            const card = header.parentElement;
+            const detail = card.querySelector('.card-detail');
+            const icon = header.querySelector('.expand-icon');
+
+            if (detail.style.maxHeight && detail.style.maxHeight !== '0px') {
+                detail.style.maxHeight = '0px';
+                detail.style.opacity = '0';
+                detail.style.padding = '0 1.75rem';
+                icon.textContent = '+';
+                card.classList.remove('expanded');
+            } else {
+                detail.style.maxHeight = detail.scrollHeight + 'px';
+                detail.style.opacity = '1';
+                detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
+                icon.textContent = '−';
+                card.classList.add('expanded');
+            }
+        }
+    </script>
+
+</body>
+</html>
