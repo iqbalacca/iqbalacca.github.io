@@ -1528,7 +1528,6 @@ h2.hero-pitch-title.hero-pitch-compact {
     align-items: center;
     flex-wrap: wrap;
     gap: 0.5rem;
-    line-height: 1.4;
 }
 
 .timeline-date {
@@ -1563,18 +1562,19 @@ h2.hero-pitch-title.hero-pitch-compact {
 .industry-badge {
     display: inline-flex;
     align-items: center;
-    background-color: transparent;
-    color: #C26112;
+    justify-content: center;
+    background-color: #2b2b30;
+    color: #94a3b8;
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    padding: 0.25rem 0.6rem;
+    padding: 0.35rem 0.6rem;
     border-radius: 4px;
-    border: 1px solid #C26112;
+    border: 1px solid #36363B;
     white-space: nowrap;
-    height: 1.5rem;
     line-height: 1;
+    vertical-align: middle;
 }
 
 /* Card Detail (Accordion Content) */
