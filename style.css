@@ -1060,25 +1060,31 @@ li { margin-bottom: 0.6rem; }
     margin-bottom: 2rem;
 }
 
-.global-footprint {
+/* Pill Badge Row */
+.global-badge-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
     flex-wrap: wrap;
+    gap: 12px;
+    justify-content: flex-start;
+    margin-top: 16px;
 }
 
-.footprint-country {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-
-.footprint-dot {
+.global-badge {
+    padding: 6px 18px;
+    border-radius: 100px;
+    border: 1px solid #C26112;
     color: #C26112;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.global-badge:hover {
+    background: #C26112;
+    color: #1A1A1D;
 }
 
 /* Credentials */
@@ -1161,12 +1167,14 @@ li { margin-bottom: 0.6rem; }
         padding: 1rem 0.75rem;
     }
 
-    .global-footprint {
-        gap: 0.75rem;
+    .global-badge-row {
+        gap: 10px;
+        margin-top: 12px;
     }
 
-    .footprint-country {
-        font-size: 0.95rem;
+    .global-badge {
+        padding: 5px 14px;
+        font-size: 0.8rem;
     }
 }
 
@@ -1333,18 +1341,6 @@ h2.hero-pitch-title.hero-pitch-compact {
         margin-bottom: 1.5rem;
     }
 }
-
-
-/* ==========================================================================
-   EXPERTISE PAGE — LEFT-ALIGNED GLOBAL FOOTPRINT
-   ========================================================================== */
-
-.global-footprint-left {
-    justify-content: flex-start !important;
-}
-
-/* Ensure text size is fine as-is — no increase needed */
-/* Current: font-size: 1.1rem on .footprint-country, which is readable */
 
 
 /* ==========================================================================
