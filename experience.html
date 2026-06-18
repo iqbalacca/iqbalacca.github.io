@@ -29,19 +29,34 @@
             <h1>Professional Experience</h1>
         </div>
 
+        <!-- Sector Filter Bar -->
+        <div class="sector-filter-bar">
+            <button class="sector-filter-btn active" onclick="filterBySector('all')">All</button>
+            <button class="sector-filter-btn" onclick="filterBySector('financial-services')">Financial Services</button>
+            <button class="sector-filter-btn" onclick="filterBySector('technology')">Technology</button>
+            <button class="sector-filter-btn" onclick="filterBySector('private-equity')">Private Equity</button>
+            <button class="sector-filter-btn" onclick="filterBySector('manufacturing')">Manufacturing</button>
+            <button class="sector-filter-btn" onclick="filterBySector('logistics')">Logistics</button>
+            <button class="sector-filter-btn" onclick="filterBySector('healthcare')">Healthcare</button>
+            <button class="sector-filter-btn" onclick="filterBySector('real-estate')">Real Estate</button>
+            <button class="sector-filter-btn" onclick="filterBySector('hospitality')">Hospitality</button>
+            <button class="sector-filter-btn" onclick="filterBySector('business-services')">Business Services</button>
+        </div>
+
         <!-- Timeline Line -->
         <div class="timeline-track">
 
             <!-- Role 1: Finance Director - Haseeb -->
-            <div class="timeline-node active">
+            <div class="timeline-node active" data-sector="financial-services technology real-estate">
                 <div class="timeline-dot active-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Finance Director</h3>
                             <p class="company-name">Haseeb Accounting & Advisory 
-                                <span class="industry-badge">FIDUCIARY</span>
-                                <span class="industry-badge">REGULATED</span>
+                                <span class="industry-badge">Financial Services</span>
+                                <span class="industry-badge">Real Estate</span>
+                                <span class="industry-badge">Technology</span>
                             </p>
                         </div>
                         <div class="header-right">
@@ -70,15 +85,15 @@
             </div>
 
             <!-- Role 2: Group Financial Controller - Selfologi -->
-            <div class="timeline-node">
+            <div class="timeline-node" data-sector="technology healthcare">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Group Financial Controller</h3>
                             <p class="company-name">Selfologi Group 
-                                <span class="industry-badge">HEALTHCARE</span>
-                                <span class="industry-badge">E-COMMERCE</span>
+                                <span class="industry-badge">Technology</span>
+                                <span class="industry-badge">Healthcare</span>
                             </p>
                         </div>
                         <div class="header-right">
@@ -106,15 +121,15 @@
             </div>
 
             <!-- Role 3: Head of Finance - Majestic -->
-            <div class="timeline-node">
+            <div class="timeline-node" data-sector="hospitality">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
                             <p class="company-name">Majestic Group 
-                                <span class="industry-badge">LUXURY RETAIL</span>
-                                <span class="industry-badge">HOSPITALITY</span>
+                                <span class="industry-badge">Hospitality</span>
+                                <span class="industry-badge">Fashion Retail</span>
                             </p>
                         </div>
                         <div class="header-right">
@@ -142,27 +157,26 @@
                 </div>
             </div>
 
-            <!-- Role 4: Head of Finance - Tasheel -->
-            <div class="timeline-node">
+            <!-- Role 4: Head of Finance - Estemarat Services -->
+            <div class="timeline-node" data-sector="business-services">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
-                            <p class="company-name">Tasheel 
-                                <span class="industry-badge">SEMI-GOVERNMENT</span>
-                                <span class="industry-badge">MULTI-BRANCH</span>
+                            <p class="company-name">Estemarat Services 
+                                <span class="industry-badge">Business Services</span>
                             </p>
                         </div>
                         <div class="header-right">
-                            <span class="timeline-date">Sep 2014 - Oct 2018</span>
+                            <span class="timeline-date">Sep 2014 - Jul 2018</span>
                             <span class="timeline-location">Dubai, UAE</span>
                             <span class="expand-icon">+</span>
                         </div>
                     </div>
                     <div class="card-detail">
                         <div class="company-context">
-                            <p class="company-desc">Semi-government service center network with 10+ branches across the UAE, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
+                            <p class="company-desc">Licensed Tasheel service center operator serving B2B corporate clients and B2C individual consumers across a 10-branch network, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
                         </div>
                         <ul class="experience-bullets">
                             <li>Drove P&L performance for 10+ service centers managing AED 150M+ in annual collections. Restructured loss-making units into profitable entities through cost-per-transaction analysis, site rationalization, and self-funded expansion of 3 new centers with zero external capital.</li>
@@ -174,22 +188,21 @@
                             <span class="skill-pill">P&L Restructuring</span>
                             <span class="skill-pill">G1 Cash Systems</span>
                             <span class="skill-pill">VAT Rollout</span>
-                            <span class="skill-pill">M&A Strategy</span>
+                            <span class="skill-pill">Multi-Branch Operations</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Role 5: Group Finance Manager - aafaq -->
-            <div class="timeline-node">
+            <div class="timeline-node" data-sector="private-equity">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Group Finance Manager</h3>
                             <p class="company-name">aafaq Islamic Finance PSC 
-                                <span class="industry-badge">PRIVATE EQUITY</span>
-                                <span class="industry-badge">ISLAMIC FINANCE</span>
+                                <span class="industry-badge">Private Equity</span>
                             </p>
                         </div>
                         <div class="header-right">
@@ -210,24 +223,25 @@
                         </ul>
                         <div class="skill-pill-group">
                             <span class="skill-pill">Portfolio Management</span>
-                            <span class="skill-pill">Islamic Finance</span>
                             <span class="skill-pill">Financial Consolidation</span>
                             <span class="skill-pill">Risk Auditing</span>
+                            <span class="skill-pill">Valuation</span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Role 6: Assistant Manager Finance - DyStar -->
-            <div class="timeline-node">
+            <div class="timeline-node" data-sector="manufacturing logistics">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Assistant Manager Finance</h3>
                             <p class="company-name">DyStar Pakistan 
-                                <span class="industry-badge">MANUFACTURING</span>
-                                <span class="industry-badge">RETAIL</span>
+                                <span class="industry-badge">Manufacturing</span>
+                                <span class="industry-badge">Logistics</span>
+                                <span class="industry-badge">Retail</span>
                             </p>
                         </div>
                         <div class="header-right">
@@ -283,6 +297,41 @@
                 detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
                 icon.textContent = '−';
                 card.classList.add('expanded');
+            }
+        }
+
+        function filterBySector(sector) {
+            // Update active button
+            document.querySelectorAll('.sector-filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Filter cards
+            const nodes = document.querySelectorAll('.timeline-node');
+            let firstMatch = null;
+
+            nodes.forEach(node => {
+                const card = node.querySelector('.timeline-card');
+                const sectors = node.dataset.sector || '';
+
+                if (sector === 'all' || sectors.includes(sector)) {
+                    node.style.opacity = '1';
+                    node.style.filter = 'none';
+                    node.style.pointerEvents = 'auto';
+                    card.style.borderColor = '';
+                    if (!firstMatch) firstMatch = node;
+                } else {
+                    node.style.opacity = '0.25';
+                    node.style.filter = 'grayscale(0.8)';
+                    node.style.pointerEvents = 'none';
+                    card.style.borderColor = '#36363B';
+                }
+            });
+
+            // Scroll to first match
+            if (firstMatch && sector !== 'all') {
+                firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
     </script>
