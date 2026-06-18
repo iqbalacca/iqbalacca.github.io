@@ -1381,9 +1381,119 @@ h2.hero-pitch-title.hero-pitch-compact {
 }
 
 
+
+/* ==========================================================================
+   EXPERIENCE PAGE — SECTOR FILTER BAR
+   ========================================================================== */
+
+.sector-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #3d3d45;
+}
+
+.sector-filter-btn {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #36363B;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sector-filter-btn:hover {
+    border-color: #C26112;
+    color: #C26112;
+}
+
+.sector-filter-btn.active {
+    background-color: #C26112;
+    color: #ffffff;
+    border-color: #C26112;
+}
+
+/* ==========================================================================
+   EXPERIENCE PAGE — FILTERED CARD STATES
+   ========================================================================== */
+
+.timeline-node {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.timeline-node[style*="opacity: 0.25"] {
+    pointer-events: none;
+}
+
+.timeline-node[style*="opacity: 0.25"] .timeline-card {
+    border-color: #36363B;
+}
+
 /* ==========================================================================
    EXPERIENCE PAGE — HYBRID VERTICAL TIMELINE
    ========================================================================== */
+
+/* ==========================================================================
+   EXPERIENCE PAGE — SECTOR FILTER BAR
+   ========================================================================== */
+
+.sector-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #3d3d45;
+}
+
+.sector-filter-btn {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #36363B;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sector-filter-btn:hover {
+    border-color: #C26112;
+    color: #C26112;
+}
+
+.sector-filter-btn.active {
+    background-color: #C26112;
+    color: #ffffff;
+    border-color: #C26112;
+}
+
+/* ==========================================================================
+   EXPERIENCE PAGE — FILTERED CARD STATES
+   ========================================================================== */
+
+.timeline-node {
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.timeline-node[style*="opacity: 0.25"] {
+    pointer-events: none;
+}
+
+.timeline-node[style*="opacity: 0.25"] .timeline-card {
+    border-color: #36363B;
+}
+
 /* ==========================================================================
    EXPERIENCE PAGE — HYBRID VERTICAL TIMELINE (REFINED)
    ========================================================================== */
