@@ -53,11 +53,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Finance Director</h3>
-                            <p class="company-name">Haseeb Accounting & Advisory 
-                                <span class="industry-badge">Financial Services</span>
-                                <span class="industry-badge">Real Estate</span>
-                                <span class="industry-badge">Technology</span>
-                            </p>
+                            <p class="company-name">Haseeb Accounting & Advisory</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Jan 2025 - Present</span>
@@ -91,10 +87,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Group Financial Controller</h3>
-                            <p class="company-name">Selfologi Group 
-                                <span class="industry-badge">Technology</span>
-                                <span class="industry-badge">Healthcare</span>
-                            </p>
+                            <p class="company-name">Selfologi Group</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Sep 2021 - Nov 2024</span>
@@ -127,10 +120,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
-                            <p class="company-name">Majestic Group 
-                                <span class="industry-badge">Hospitality</span>
-                                <span class="industry-badge">Fashion Retail</span>
-                            </p>
+                            <p class="company-name">Majestic Group</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Dec 2018 - Aug 2021</span>
@@ -164,9 +154,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
-                            <p class="company-name">Estemarat Services 
-                                <span class="industry-badge">Business Services</span>
-                            </p>
+                            <p class="company-name">Estemarat Services</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Sep 2014 - Jul 2018</span>
@@ -201,9 +189,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Group Finance Manager</h3>
-                            <p class="company-name">aafaq Islamic Finance PSC 
-                                <span class="industry-badge">Private Equity</span>
-                            </p>
+                            <p class="company-name">aafaq Islamic Finance PSC</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Dec 2011 - Aug 2014</span>
@@ -238,11 +224,7 @@
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Assistant Manager Finance</h3>
-                            <p class="company-name">DyStar Pakistan 
-                                <span class="industry-badge">Manufacturing</span>
-                                <span class="industry-badge">Logistics</span>
-                                <span class="industry-badge">Retail</span>
-                            </p>
+                            <p class="company-name">DyStar Pakistan</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Feb 2007 - Sep 2011</span>
@@ -329,8 +311,21 @@
                 }
             });
 
-            // Scroll to first match
+            // Auto-expand and scroll to first match
             if (firstMatch && sector !== 'all') {
+                const card = firstMatch.querySelector('.timeline-card');
+                const header = card.querySelector('.card-header');
+                const detail = card.querySelector('.card-detail');
+                const icon = card.querySelector('.expand-icon');
+
+                // Expand the card
+                detail.style.maxHeight = detail.scrollHeight + 'px';
+                detail.style.opacity = '1';
+                detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
+                icon.textContent = '−';
+                card.classList.add('expanded');
+
+                // Scroll to it
                 firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
