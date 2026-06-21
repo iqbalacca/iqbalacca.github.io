@@ -880,21 +880,6 @@ li { margin-bottom: 0.6rem; }
         font-size: 1.8rem;
         top: 1.25rem;
     }
-
-    .timeline-track {
-        padding-left: 1.25rem;
-    }
-
-    .timeline-track::before {
-        left: 1.25rem;
-    }
-
-    .timeline-dot {
-        left: -5px;
-        width: 10px;
-        height: 10px;
-        top: 1.1rem;
-    }
 }
 
 
@@ -1536,18 +1521,17 @@ h2.hero-pitch-title.hero-pitch-compact {
 /* Timeline Track */
 .timeline-track {
     position: relative;
-    padding-left: 30px;
+    padding-left: 2rem;
 }
 
-/* Dedicated line element — spans full height of track */
-.timeline-line {
+.timeline-track::before {
+    content: '';
     position: absolute;
-    left: 14px;
+    left: 0;
     top: 0;
     bottom: 0;
     width: 2px;
     background-color: #3d3d45;
-    z-index: 0;
 }
 
 /* Timeline Node */
@@ -1560,20 +1544,18 @@ h2.hero-pitch-title.hero-pitch-compact {
     margin-bottom: 0;
 }
 
-/* Timeline Dot — centered on the line */
-/* Line center at 15px (14px + 1px). Node starts at 30px. */
-/* Dot left edge at 30px - 21px = 9px. Dot center at 9px + 6px = 15px. */
+/* Timeline Dot */
 .timeline-dot {
     position: absolute;
-    left: -21px;
+    left: -2rem;
     top: 1.25rem;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #36363B;
     border: 2px solid #36363B;
+    transform: translateX(-5px);
     transition: all 0.3s ease;
-    z-index: 1;
 }
 
 .timeline-dot.active-dot {
@@ -1790,17 +1772,14 @@ h2.hero-pitch-title.hero-pitch-compact {
     }
 
     .timeline-track {
-        padding-left: 24px;
-    }
-
-    .timeline-line {
-        left: 11px;
+        padding-left: 1.5rem;
     }
 
     .timeline-dot {
-        left: -17px;
+        left: -1.5rem;
         width: 10px;
         height: 10px;
+        transform: translateX(-4px);
         top: 1.15rem;
     }
 
@@ -1876,46 +1855,12 @@ h2.hero-pitch-title.hero-pitch-compact {
 
 @media (max-width: 480px) {
     .timeline-track {
-        padding-left: 20px;
-    }
-
-    .timeline-line {
-        left: 9px;
-    }
-
-    .timeline-dot {
-        left: -15px;
-        width: 10px;
-        height: 10px;
-        top: 1.1rem;
-    }
-
-    .industry-badge {
-        font-size: 0.6rem;
-        padding: 0.2rem 0.5rem;
-        height: 1.3rem;
-    }
-
-    .company-name {
-        gap: 0.3rem;
-    }
-
-    .expand-icon {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .timeline-track {
         padding-left: 1.25rem;
     }
 
-    .timeline-track::before {
-        left: 0;
-    }
-
     .timeline-dot {
-        left: -5px;
+        left: -1.25rem;
+        transform: translateX(-3px);
         top: 1.1rem;
     }
 
