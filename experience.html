@@ -27,24 +27,24 @@
         </div>
 
         <div class="sector-filter-bar">
-            <button class="sector-filter-btn active" onclick="filterBySector('all')">All</button>
-            <button class="sector-filter-btn" onclick="filterBySector('financial-services')">Financial Services</button>
-            <button class="sector-filter-btn" onclick="filterBySector('technology')">Technology</button>
-            <button class="sector-filter-btn" onclick="filterBySector('private-equity')">Private Equity</button>
-            <button class="sector-filter-btn" onclick="filterBySector('manufacturing')">Manufacturing</button>
-            <button class="sector-filter-btn" onclick="filterBySector('logistics')">Logistics</button>
-            <button class="sector-filter-btn" onclick="filterBySector('healthcare')">Healthcare</button>
-            <button class="sector-filter-btn" onclick="filterBySector('real-estate')">Real Estate</button>
-            <button class="sector-filter-btn" onclick="filterBySector('hospitality')">Hospitality</button>
-            <button class="sector-filter-btn" onclick="filterBySector('business-services')">Business Services</button>
+            <button class="sector-filter-btn active" onclick="filterBySector('all', event)">All</button>
+            <button class="sector-filter-btn" onclick="filterBySector('financial-services', event)">Financial Services</button>
+            <button class="sector-filter-btn" onclick="filterBySector('technology', event)">Technology</button>
+            <button class="sector-filter-btn" onclick="filterBySector('private-equity', event)">Private Equity</button>
+            <button class="sector-filter-btn" onclick="filterBySector('manufacturing', event)">Manufacturing</button>
+            <button class="sector-filter-btn" onclick="filterBySector('logistics', event)">Logistics</button>
+            <button class="sector-filter-btn" onclick="filterBySector('healthcare', event)">Healthcare</button>
+            <button class="sector-filter-btn" onclick="filterBySector('real-estate', event)">Real Estate</button>
+            <button class="sector-filter-btn" onclick="filterBySector('hospitality', event)">Hospitality</button>
+            <button class="sector-filter-btn" onclick="filterBySector('business-services', event)">Business Services</button>
         </div>
 
         <div class="timeline-track">
 
-            <div class="timeline-node active" data-sector="financial-services technology real-estate">
+            <div class="timeline-node" data-sector="financial-services technology real-estate">
                 <div class="timeline-dot active-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card expanded" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Finance Director</h3>
                             <p class="company-name">Haseeb Accounting & Advisory</p>
@@ -52,10 +52,10 @@
                         <div class="header-right">
                             <span class="timeline-date">Jan 2025 to Present</span>
                             <span class="timeline-location">Dubai, UAE</span>
-                            <span class="expand-icon">›</span>
+                            <span class="expand-icon" style="transform: translateY(-50%) rotate(90deg); color: #C26112;">›</span>
                         </div>
                     </div>
-                    <div class="card-detail">
+                    <div class="card-detail" style="max-height: 2000px; opacity: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
                         <div class="company-context">
                             <p class="company-desc">Boutique UAE advisory firm serving DFSA/FSRA regulated investment entities (Category 3C) and growth stage SMEs. Dual practice: regulated finance officer appointments for DIFC/ADGM investment firms, and fractional CFO/tax advisory.</p>
                         </div>
@@ -72,8 +72,8 @@
 
             <div class="timeline-node" data-sector="technology healthcare">
                 <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Group Financial Controller</h3>
                             <p class="company-name">Selfologi Group</p>
@@ -103,8 +103,8 @@
 
             <div class="timeline-node" data-sector="hospitality">
                 <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
                             <p class="company-name">Majestic Group</p>
@@ -133,8 +133,8 @@
 
             <div class="timeline-node" data-sector="business-services">
                 <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
                             <p class="company-name">Tasheel</p>
@@ -163,8 +163,8 @@
 
             <div class="timeline-node" data-sector="private-equity">
                 <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Group Finance Manager</h3>
                             <p class="company-name">Aafaq Islamic Finance PSC</p>
@@ -192,8 +192,8 @@
 
             <div class="timeline-node" data-sector="manufacturing logistics">
                 <div class="timeline-dot"></div>
-                <div class="timeline-card">
-                    <div class="card-header" onclick="toggleCard(this)">
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
                         <div class="header-left">
                             <h3 class="role-title">Assistant Manager Finance</h3>
                             <p class="company-name">DyStar Pakistan</p>
@@ -227,27 +227,56 @@
     </main>
 
     <script>
-        function toggleCard(header) {
-            const card = header.parentElement;
-            const detail = card.querySelector('.card-detail');
-            const icon = header.querySelector('.expand-icon');
+        function setActiveDot(node) {
+            document.querySelectorAll('.timeline-dot').forEach(d => {
+                d.classList.remove('active-dot');
+            });
+            node.querySelector('.timeline-dot').classList.add('active-dot');
+        }
 
-            if (detail.style.maxHeight && detail.style.maxHeight !== '0px') {
+        function toggleCard(card) {
+            const detail = card.querySelector('.card-detail');
+            const icon = card.querySelector('.expand-icon');
+            const node = card.closest('.timeline-node');
+            const isExpanded = card.classList.contains('expanded');
+
+            if (isExpanded) {
+                // Collapse this card
                 detail.style.maxHeight = '0px';
                 detail.style.opacity = '0';
-                detail.style.padding = '0 1.75rem';
-                icon.style.transform = 'rotate(0deg)';
+                detail.style.padding = '0 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(0deg)';
+                icon.style.color = '';
                 card.classList.remove('expanded');
+                // Return dot to Haseeb (first node)
+                setActiveDot(document.querySelector('.timeline-node'));
             } else {
+                // Collapse any other open card first
+                document.querySelectorAll('.timeline-card.expanded').forEach(openCard => {
+                    const openDetail = openCard.querySelector('.card-detail');
+                    const openIcon = openCard.querySelector('.expand-icon');
+                    openDetail.style.maxHeight = '0px';
+                    openDetail.style.opacity = '0';
+                    openDetail.style.padding = '0 1.5rem';
+                    openIcon.style.transform = 'translateY(-50%) rotate(0deg)';
+                    openIcon.style.color = '';
+                    openCard.classList.remove('expanded');
+                });
+
+                // Expand this card
                 detail.style.maxHeight = detail.scrollHeight + 'px';
                 detail.style.opacity = '1';
-                detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
-                icon.style.transform = 'rotate(90deg)';
+                detail.style.padding = '0 1.5rem 1.5rem 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(90deg)';
+                icon.style.color = '#C26112';
                 card.classList.add('expanded');
+
+                // Light up this node's dot
+                setActiveDot(node);
             }
         }
 
-        function filterBySector(sector) {
+        function filterBySector(sector, event) {
             document.querySelectorAll('.sector-filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
@@ -274,18 +303,35 @@
                 }
             });
 
-            if (firstMatch && sector !== 'all') {
+            // Collapse all first
+            document.querySelectorAll('.timeline-card.expanded').forEach(openCard => {
+                const openDetail = openCard.querySelector('.card-detail');
+                const openIcon = openCard.querySelector('.expand-icon');
+                openDetail.style.maxHeight = '0px';
+                openDetail.style.opacity = '0';
+                openDetail.style.padding = '0 1.5rem';
+                openIcon.style.transform = 'translateY(-50%) rotate(0deg)';
+                openIcon.style.color = '';
+                openCard.classList.remove('expanded');
+            });
+
+            if (firstMatch) {
                 const card = firstMatch.querySelector('.timeline-card');
                 const detail = card.querySelector('.card-detail');
                 const icon = card.querySelector('.expand-icon');
 
                 detail.style.maxHeight = detail.scrollHeight + 'px';
                 detail.style.opacity = '1';
-                detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
-                icon.style.transform = 'rotate(90deg)';
+                detail.style.padding = '0 1.5rem 1.5rem 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(90deg)';
+                icon.style.color = '#C26112';
                 card.classList.add('expanded');
 
-                firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setActiveDot(firstMatch);
+
+                if (sector !== 'all') {
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             }
         }
     </script>
