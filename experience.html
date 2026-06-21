@@ -156,14 +156,14 @@
                 </div>
             </div>
 
-            <!-- Role 4: Head of Finance - Estemarat Services -->
+            <!-- Role 4: Head of Finance - Tasheel -->
             <div class="timeline-node" data-sector="business-services">
                 <div class="timeline-dot"></div>
                 <div class="timeline-card">
                     <div class="card-header" onclick="toggleCard(this)">
                         <div class="header-left">
                             <h3 class="role-title">Head of Finance</h3>
-                            <p class="company-name">Estemarat Services</p>
+                            <p class="company-name">Tasheel</p>
                         </div>
                         <div class="header-right">
                             <span class="timeline-date">Sep 2014 to Jul 2018</span>
@@ -173,13 +173,15 @@
                     </div>
                     <div class="card-detail">
                         <div class="company-context">
-                            <p class="company-desc">Licensed Tasheel service center operator serving B2B corporate clients and B2C individual consumers across a 10 branch network, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
+                            <p class="company-desc">Licensed service center operator serving B2B corporate clients and B2C individual consumers across a 10 branch network, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
                         </div>
                         <ul class="experience-bullets">
-                            <li>Drove P&L performance for 10+ service centers managing AED 150M+ in annual collections. Restructured loss making units into profitable entities through cost per transaction analysis, site rationalization, and self funded expansion of 3 new centers with zero external capital.</li>
-                            <li>Established branch level profitability and unit economics measurement across 6 government agency affiliations, enabling data driven site decisions and resource allocation.</li>
-                            <li>Managed daily cash reconciliation for AED 150M+ annual collections via G1 system across all centers, ensuring zero discrepancies and timely remittance to ministries.</li>
-                            <li>Navigated VAT uncertainty for service fees while rolling out ERP. Worked directly with government agencies to determine compliance, implemented software, and ensured zero penalties.</li>
+                            <li>Managed treasury and working capital across 10 branches, funding 3 new center expansions from retained cash flows while maintaining daily ministry remittance obligations and zero reconciliation discrepancies.</li>
+                            <li>Diagnosed underperforming branches through cost per transaction and EBITDA analysis, reallocated resources from low velocity to high velocity operations, and flipped loss making units to profitability.</li>
+                            <li>Built branch level profit and loss and unit economics from scratch across 6 ministry affiliations, presenting monthly performance to the board and replacing opaque reporting with data driven decisions on expansion, resource allocation, and site closures.</li>
+                            <li>Clarified VAT treatment for newly introduced tax on semi government service fees by engaging FTA, MOHRE, and MOH directly, implemented ERP compliance rules, and delivered zero penalties across the network.</li>
+                            <li>Designed performance measurement frameworks and initiated monthly business unit reviews across 10 branches, enforcing accountability and shifting management decision making from anecdote to hard data.</li>
+                            <li>Navigated ministry audits across MOHRE, MOH, and DED affiliations, prepared branch level documentation and financial records, and delivered zero findings while preserving operational licenses across the network.</li>
                         </ul>
                     </div>
                     <div class="skill-pill-group">
@@ -292,13 +294,11 @@
         }
 
         function filterBySector(sector) {
-            // Update active button
             document.querySelectorAll('.sector-filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             event.target.classList.add('active');
 
-            // Filter cards
             const nodes = document.querySelectorAll('.timeline-node');
             let firstMatch = null;
 
@@ -320,21 +320,17 @@
                 }
             });
 
-            // Auto-expand and scroll to first match
             if (firstMatch && sector !== 'all') {
                 const card = firstMatch.querySelector('.timeline-card');
-                const header = card.querySelector('.card-header');
                 const detail = card.querySelector('.card-detail');
                 const icon = card.querySelector('.expand-icon');
 
-                // Expand the card
                 detail.style.maxHeight = detail.scrollHeight + 'px';
                 detail.style.opacity = '1';
                 detail.style.padding = '0 1.75rem 1.5rem 1.75rem';
                 icon.textContent = '−';
                 card.classList.add('expanded');
 
-                // Scroll to it
                 firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         }
