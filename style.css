@@ -1518,26 +1518,34 @@ h2.hero-pitch-title.hero-pitch-compact {
     letter-spacing: -0.5px;
 }
 
-/* Timeline Track */
+/* Timeline Track — FIXED */
 .timeline-track {
     position: relative;
     padding-left: 2rem;
+    /* FIX: Use flex column so track has definite height spanning all children */
+    display: flex;
+    flex-direction: column;
 }
 
+/* The vertical line — FIXED: now stretches full height of all nodes */
 .timeline-track::before {
     content: '';
     position: absolute;
     left: 0;
     top: 0;
-    bottom: 0;
+    /* FIX: Use 100% height since flex container has definite height */
+    height: 100%;
     width: 2px;
     background-color: #3d3d45;
+    z-index: 0;
 }
 
 /* Timeline Node */
 .timeline-node {
     position: relative;
     margin-bottom: 1rem;
+    /* FIX: Prevent flex shrinking so all nodes contribute to track height */
+    flex-shrink: 0;
 }
 
 .timeline-node:last-child {
@@ -1556,6 +1564,7 @@ h2.hero-pitch-title.hero-pitch-compact {
     border: 2px solid #36363B;
     transform: translateX(-5px);
     transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .timeline-dot.active-dot {
@@ -1775,6 +1784,10 @@ h2.hero-pitch-title.hero-pitch-compact {
         padding-left: 1.5rem;
     }
 
+    .timeline-track::before {
+        left: 0;
+    }
+
     .timeline-dot {
         left: -1.5rem;
         width: 10px;
@@ -1856,6 +1869,10 @@ h2.hero-pitch-title.hero-pitch-compact {
 @media (max-width: 480px) {
     .timeline-track {
         padding-left: 1.25rem;
+    }
+
+    .timeline-track::before {
+        left: 0;
     }
 
     .timeline-dot {
