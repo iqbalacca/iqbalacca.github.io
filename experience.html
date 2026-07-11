@@ -1,10 +1,339 @@
-<div class="company-context">
-    <p class="company-desc">Boutique UAE advisory firm serving DFSA/FSRA regulated investment entities, including Category 3C fund managers, and growth-stage SMEs. Dual practice: fractional CFO and tax advisory for SMEs, and regulated Finance Officer appointments for DIFC/ADGM investment firms.</p>
-</div>
-<ul class="experience-bullets">
-    <li><strong>Fractional CFO & Capital Advisory:</strong> Fractional CFO for UAE SMEs, building end-to-end capital raise materials, financial models, feasibility studies, and due diligence packages for angel investor and bank submissions across multiple client engagements, structuring capital asks ranging from AED 2M to AED 10M per raise across fintech, payments, healthcare, and financial services.</li>
-    <li><strong>Regulated Finance Officer (DFSA/FSRA):</strong> Executes statutory Finance Officer mandates under DFSA and FSRA frameworks for Category 3C fund managers, directing capital adequacy, PIB/PRU reporting, and EPRS prudential filings. Segregated client monies and aligned IFRS reporting with DFSA/FSRA prudential rules alongside external auditors. Zero late penalties, unqualified audit opinions.</li>
-    <li><strong>Statutory Reporting & Board Governance:</strong> Prepared management accounts for external audit across multiple SME and regulated clients, with audited financial statements submitted to DMCC, JAFZA, DIFC, ADGM, and mainland DED authorities, and delivered board-level reporting covering financial performance, variance analysis, and cash flow.</li>
-    <li><strong>Tax Structuring & Corporate Advisory:</strong> Structured QFZP compliance, CIGA, and transfer pricing for free zone entities, securing 0% corporate tax rate on qualifying income, and directed mainland corporate tax planning under the standard corporate tax framework.</li>
-    <li><strong>Systems and Automation:</strong> Deployed and configured Oracle NetSuite, Odoo, Zoho, Microsoft Dynamics, and FirstBit ERP systems for SME clients; automated invoice creation, accounts payable processing, UAE VAT and corporate tax ledger tagging, credit control and debt collection workflows, inventory tracking, and expense management using Make.com, Zapier, and Zoho automations, reducing manual processing and improving data accuracy.</li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Iqbal | Experience</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Muhammad Iqbal, ACCA</div>
+        <nav class="nav-links">
+            <a href="index.html" target="_self">Home</a>
+            <a href="experience.html" class="active" target="_self">Experience</a>
+            <a href="expertise.html" target="_self">Expertise</a>
+            <a href="connect.html" target="_self">Connect</a>
+        </nav>
+    </header>
+
+    <main class="timeline-container">
+
+        <div class="timeline-header">
+            <h1>Professional Experience</h1>
+        </div>
+
+        <div class="sector-filter-bar">
+            <button class="sector-filter-btn active" onclick="filterBySector('all', event)">All</button>
+            <button class="sector-filter-btn" onclick="filterBySector('financial-services', event)">Financial Services</button>
+            <button class="sector-filter-btn" onclick="filterBySector('technology', event)">Technology</button>
+            <button class="sector-filter-btn" onclick="filterBySector('private-equity', event)">Private Equity</button>
+            <button class="sector-filter-btn" onclick="filterBySector('manufacturing', event)">Manufacturing</button>
+            <button class="sector-filter-btn" onclick="filterBySector('logistics', event)">Logistics</button>
+            <button class="sector-filter-btn" onclick="filterBySector('healthcare', event)">Healthcare</button>
+            <button class="sector-filter-btn" onclick="filterBySector('real-estate', event)">Real Estate</button>
+            <button class="sector-filter-btn" onclick="filterBySector('hospitality', event)">Hospitality</button>
+            <button class="sector-filter-btn" onclick="filterBySector('business-services', event)">Business Services</button>
+        </div>
+
+        <div class="timeline-track">
+
+            <div class="timeline-node" data-sector="financial-services technology real-estate">
+                <div class="timeline-dot active-dot"></div>
+                <div class="timeline-card expanded" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Financial Controller</h3>
+                            <p class="company-name">Haseeb Accounting & Advisory</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Jan 2025 to Present</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon" style="transform: translateY(-50%) rotate(90deg); color: #C26112;">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail" style="max-height: 2000px; opacity: 1; padding: 0 1.5rem 1.5rem 1.5rem;">
+                        <div class="company-context">
+                            <p class="company-desc">Boutique UAE advisory firm serving DFSA/FSRA regulated investment entities, including Category 3C fund managers, and growth-stage SMEs. Dual practice: fractional CFO and tax advisory for SMEs, and regulated Finance Officer appointments for DIFC/ADGM investment firms.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>Fractional CFO & Capital Advisory:</strong> Fractional CFO for UAE SMEs, building end-to-end capital raise materials, financial models, feasibility studies, and due diligence packages for angel investor and bank submissions across multiple client engagements, structuring capital asks ranging from AED 2M to AED 10M per raise across fintech, payments, healthcare, and financial services.</li>
+                            <li><strong>Regulated Finance Officer (DFSA/FSRA):</strong> Executes statutory Finance Officer mandates under DFSA and FSRA frameworks for Category 3C fund managers, directing capital adequacy, PIB/PRU reporting, and EPRS prudential filings. Segregated client monies and aligned IFRS reporting with DFSA/FSRA prudential rules alongside external auditors. Zero late penalties, unqualified audit opinions.</li>
+                            <li><strong>Statutory Reporting & Board Governance:</strong> Prepared management accounts for external audit across multiple SME and regulated clients, with audited financial statements submitted to DMCC, JAFZA, DIFC, ADGM, and mainland DED authorities, and delivered board-level reporting covering financial performance, variance analysis, and cash flow.</li>
+                            <li><strong>Tax Structuring & Corporate Advisory:</strong> Structured QFZP compliance, CIGA, and transfer pricing for free zone entities, securing 0% corporate tax rate on qualifying income, and directed mainland corporate tax planning under the standard corporate tax framework.</li>
+                            <li><strong>Systems and Automation:</strong> Deployed and configured Oracle NetSuite, Odoo, Zoho, Microsoft Dynamics, and FirstBit ERP systems for SME clients; automated invoice creation, accounts payable processing, UAE VAT and corporate tax ledger tagging, credit control and debt collection workflows, inventory tracking, and expense management using Make.com, Zapier, and Zoho automations, reducing manual processing and improving data accuracy.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node" data-sector="technology healthcare">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Group Financial Controller</h3>
+                            <p class="company-name">Selfologi Group</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2021 to Nov 2024</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">USD 17.5M venture backed medical aesthetics and wellness marketplace operating across UAE, KSA, UK and BVI. First DHA licensed cosmetic treatment platform in the UAE, connecting consumers to 150+ verified clinics through editorial content and booking, with revenue earned on clinic commissions per referral.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Directed group financial strategy with full ownership of financial, legal and compliance infrastructure across UAE, KSA, UK and BVI, taking the business from pre launch to a clean unqualified audit opinion on first cycle group financials.</li>
+                            <li>Partnered directly with the CEO and regional BU heads, turning complex multi currency financial data into clear strategic narratives that informed growth roadmaps and guided capital allocation decisions.</li>
+                            <li>Engineered revenue recognition and cash flow architecture for a payment intermediary marketplace, holding consumer payments in escrow like accounts and remitting net commissions to 150+ clinics, with tiered commission models, clawbacks and refund reserves built to protect gross margin as promotional activity and refund volume scaled.</li>
+                            <li>Structured the entity and tax framework across ADGM, DMCC and KSA to secure group level tax efficiency and enable compliant intercompany dealings across the multi entity marketplace, covering tax registration, transfer pricing and cross border compliance.</li>
+                            <li>Delivered KSA market entry readiness, including local banking, VAT registration and entity structure, within 6 months while navigating Saudi regulatory and compliance requirements from scratch.</li>
+                            <li>Owned end to end investor relations for the USD 17.5M seed raise, managing capital calls, cap table and spend reporting that kept investors and the board informed for capital allocation decisions.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node" data-sector="hospitality">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Head of Finance</h3>
+                            <p class="company-name">Majestic Group</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2018 to Aug 2021</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Consolidated UAE group managing a diversified portfolio of luxury fashion retail across 12 locations and hospitality operations spanning 380 hotel rooms. Headed the group finance mandate, directing multi entity capital allocation, treasury performance, and digital expansion strategies.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Structured a multi entity balance sheet architecture separating hospitality assets from retail operations, enabling division level profit and loss accountability and cleaner capital allocation across the portfolio.</li>
+                            <li>Directed cross divisional cash pooling mechanisms, leveraging hotel occupancy liquidity to sustain retail inventory continuity during supply chain disruptions, preserving vendor relationships and preventing stockouts across 12 locations.</li>
+                            <li>Delivered the financial infrastructure and payment gateways for a strategic ecommerce launch, capturing 30 percent of total revenue within 6 months and diversifying the revenue model beyond traditional physical retail.</li>
+                            <li>Built automated cross channel reporting and reconciliation workflows, transforming raw data into actionable financial intelligence and accelerating month end visibility for a combined operation of 380 hotel rooms and 12 retail sites.</li>
+                            <li>Navigated the 2020 pandemic by restructuring the physical retail footprint, closing underperforming sites to eliminate channel cannibalization while redirecting resources to high growth digital corridors.</li>
+                            <li>Executed critical procurement renegotiations across 380 hotel rooms and the retail supply chain, unlocking localized working capital reserves to stabilize net operating margins without external liquidity injections.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node" data-sector="business-services">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Head of Finance</h3>
+                            <p class="company-name">Tasheel</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2014 to Jul 2018</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Licensed service center operator serving B2B corporate clients and B2C individual consumers across a 10 branch network, processing AED 150M+ annually in government transactions under MOHRE, MOH, DED, and other ministries.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Managed treasury and working capital across 10 branches, funding 3 new center expansions from retained cash flows while maintaining daily ministry remittance obligations and zero reconciliation discrepancies.</li>
+                            <li>Diagnosed underperforming branches through cost per transaction and EBITDA analysis, reallocated resources from low velocity to high velocity operations, and flipped loss making units to profitability.</li>
+                            <li>Built branch level profit and loss and unit economics from scratch across 6 ministry affiliations, presenting monthly performance to the board and replacing opaque reporting with data driven decisions on expansion, resource allocation, and site closures.</li>
+                            <li>Clarified VAT treatment for newly introduced tax on semi government service fees by engaging FTA, MOHRE, and MOH directly, implemented ERP compliance rules, and delivered zero penalties across the network.</li>
+                            <li>Designed performance measurement frameworks and initiated monthly business unit reviews across 10 branches, enforcing accountability and shifting management decision making from anecdote to hard data.</li>
+                            <li>Navigated ministry audits across MOHRE, MOH, and DED affiliations, prepared branch level documentation and financial records, and delivered zero findings while preserving operational licenses across the network.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node" data-sector="private-equity">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Group Finance Manager</h3>
+                            <p class="company-name">Aafaq Islamic Finance PSC</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2011 to Aug 2014</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Aafaq Islamic Finance PJSC. Public Joint Stock Company. The firm operates as a Shariah compliant investment house providing structured financing, corporate credit, and venture capital, with a consolidated balance sheet requiring group level treasury management and regulatory oversight.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Built group level consolidation framework for 8 portfolio companies across private equity, real estate, F&B, and SME financing, delivering unified visibility to the board where none existed.</li>
+                            <li>Flagged material discrepancies and hidden liabilities in portfolio company financials, surfaced off balance sheet exposures and related party transactions to the investment team, and prevented misstated valuations from reaching board approval.</li>
+                            <li>Verified conversion terms and valuation models for convertible loan instruments, ensuring full compliance with Islamic finance principles and accurate assessment before Shariah board approval.</li>
+                            <li>Validated financial covenants and performance metrics tied to equity and loan agreements, identified early warning signs and covenant breaches, and triggered recovery actions that protected capital and shortened loss timelines.</li>
+                            <li>Coordinated external audits across 8 portfolio companies, scoped audit coverage around specific risk exposures, and held auditors accountable while ensuring all findings were resolved before sign off.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-node" data-sector="manufacturing logistics">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card" onclick="toggleCard(this)">
+                    <div class="card-header">
+                        <div class="header-left">
+                            <h3 class="role-title">Assistant Manager Finance</h3>
+                            <p class="company-name">DyStar Pakistan</p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Feb 2007 to Sep 2011</span>
+                            <span class="timeline-location">Karachi, Pakistan</span>
+                            <span class="expand-icon">›</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <p class="company-desc">Subsidiary of DyStar GmbH, a global textile dyes and chemicals manufacturer with German heritage roots (Bayer, Hoechst, and BASF). Operates as an indenting house, toll manufacturer, and B2B retail distribution arm for textile mills.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li>Managed monthly financial reporting, CAPEX tracking, and payment approvals for indenting, toll manufacturing, and retail operations in SAP; served as DyStar Global QM auditor, enforcing group compliance standards.</li>
+                            <li>Structured and executed import LCs for chemical shipments from Singapore and Germany; managed trade finance documentation, forex exposure, and banking relationships across a 60/20/20 revenue mix of indenting, toll manufacturing, and retail.</li>
+                            <li>Directed cost accounting and inventory valuation for toll manufacturing cycles; performed variance analysis against standard costs to control COGS and protect margins in volatile raw material markets.</li>
+                            <li>Coordinated with external auditors and tax authorities for statutory compliance; prepared audit schedules and reconciliations, delivering clean sign offs with zero qualifications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="timeline-footer-action">
+            <a href="expertise.html" class="btn-primary" target="_self">View Core Expertise</a>
+        </div>
+
+    </main>
+
+    <script>
+        function setActiveDot(node) {
+            document.querySelectorAll('.timeline-dot').forEach(d => {
+                d.classList.remove('active-dot');
+            });
+            node.querySelector('.timeline-dot').classList.add('active-dot');
+        }
+
+        function toggleCard(card) {
+            const detail = card.querySelector('.card-detail');
+            const icon = card.querySelector('.expand-icon');
+            const node = card.closest('.timeline-node');
+            const isExpanded = card.classList.contains('expanded');
+
+            if (isExpanded) {
+                // Collapse this card
+                detail.style.maxHeight = '0px';
+                detail.style.opacity = '0';
+                detail.style.padding = '0 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(0deg)';
+                icon.style.color = '';
+                card.classList.remove('expanded');
+                // Return dot to Haseeb (first node)
+                setActiveDot(document.querySelector('.timeline-node'));
+            } else {
+                // Collapse any other open card first
+                document.querySelectorAll('.timeline-card.expanded').forEach(openCard => {
+                    const openDetail = openCard.querySelector('.card-detail');
+                    const openIcon = openCard.querySelector('.expand-icon');
+                    openDetail.style.maxHeight = '0px';
+                    openDetail.style.opacity = '0';
+                    openDetail.style.padding = '0 1.5rem';
+                    openIcon.style.transform = 'translateY(-50%) rotate(0deg)';
+                    openIcon.style.color = '';
+                    openCard.classList.remove('expanded');
+                });
+
+                // Expand this card
+                detail.style.maxHeight = detail.scrollHeight + 'px';
+                detail.style.opacity = '1';
+                detail.style.padding = '0 1.5rem 1.5rem 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(90deg)';
+                icon.style.color = '#C26112';
+                card.classList.add('expanded');
+
+                // Light up this node's dot
+                setActiveDot(node);
+            }
+        }
+
+        function filterBySector(sector, event) {
+            document.querySelectorAll('.sector-filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            const nodes = document.querySelectorAll('.timeline-node');
+            let firstMatch = null;
+
+            nodes.forEach(node => {
+                const card = node.querySelector('.timeline-card');
+                const sectors = node.dataset.sector || '';
+
+                if (sector === 'all' || sectors.includes(sector)) {
+                    node.style.opacity = '1';
+                    node.style.filter = 'none';
+                    node.style.pointerEvents = 'auto';
+                    card.style.borderColor = '';
+                    if (!firstMatch) firstMatch = node;
+                } else {
+                    node.style.opacity = '0.25';
+                    node.style.filter = 'grayscale(0.8)';
+                    node.style.pointerEvents = 'none';
+                    card.style.borderColor = '#36363B';
+                }
+            });
+
+            // Collapse all first
+            document.querySelectorAll('.timeline-card.expanded').forEach(openCard => {
+                const openDetail = openCard.querySelector('.card-detail');
+                const openIcon = openCard.querySelector('.expand-icon');
+                openDetail.style.maxHeight = '0px';
+                openDetail.style.opacity = '0';
+                openDetail.style.padding = '0 1.5rem';
+                openIcon.style.transform = 'translateY(-50%) rotate(0deg)';
+                openIcon.style.color = '';
+                openCard.classList.remove('expanded');
+            });
+
+            if (firstMatch) {
+                const card = firstMatch.querySelector('.timeline-card');
+                const detail = card.querySelector('.card-detail');
+                const icon = card.querySelector('.expand-icon');
+
+                detail.style.maxHeight = detail.scrollHeight + 'px';
+                detail.style.opacity = '1';
+                detail.style.padding = '0 1.5rem 1.5rem 1.5rem';
+                icon.style.transform = 'translateY(-50%) rotate(90deg)';
+                icon.style.color = '#C26112';
+                card.classList.add('expanded');
+
+                setActiveDot(firstMatch);
+
+                if (sector !== 'all') {
+                    firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
