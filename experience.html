@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Iqbal | ACCA Portfolio</title>
+    <title>Experience | Muhammad Iqbal, ACCA</title>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <base target="_blank">
@@ -15,145 +15,288 @@
     <header class="navbar">
         <div class="logo">Muhammad Iqbal, ACCA</div>
         <nav class="nav-links">
-            <a href="index.html" class="active" target="_self">Home</a>
-            <a href="experience.html" target="_self">Experience</a>
+            <a href="index.html" target="_self">Home</a>
+            <a href="experience.html" class="active" target="_self">Experience</a>
             <a href="expertise.html" target="_self">Expertise</a>
             <a href="connect.html" target="_self">Connect</a>
         </nav>
     </header>
 
-    <!-- 2026 Institutional Cockpit Dashboard Framework Container -->
-    <main class="cockpit-container">
+    <!-- Experience Page Container -->
+    <main class="timeline-container">
 
-        <!-- Column 1: Left Floating Profile Anchor Box -->
-        <section class="cockpit-left-anchor">
-            <img src="profile.png" alt="Muhammad Iqbal" class="cockpit-profile-img">
-            <div class="badge-stack">
-                <div class="badge-tag">ACCA Member</div>
-                <div class="badge-tag">Financial Controller</div>
-            </div>
-            <!-- Left Tagline Component -->
-            <div class="tagline-container-block">
-                <p class="tagline-text-stamp tagline-large">
-                    Build, Control, Scale & Deliver
-                </p>
-            </div>
-        </section>
+        <!-- Page Header -->
+        <div class="timeline-header">
+            <h1>Experience</h1>
+        </div>
 
-        <!-- Column 2: Right Wide Institutional Financial Ledger Sheet -->
-        <section class="cockpit-main-ledger">
+        <!-- Sector Filter Bar -->
+        <div class="sector-filter-bar">
+            <button class="sector-filter-btn active" data-filter="all">All</button>
+            <button class="sector-filter-btn" data-filter="regulated">Regulated</button>
+            <button class="sector-filter-btn" data-filter="hospitality">Hospitality</button>
+            <button class="sector-filter-btn" data-filter="healthcare">Healthcare</button>
+            <button class="sector-filter-btn" data-filter="government">Government</button>
+            <button class="sector-filter-btn" data-filter="investment">Investment</button>
+            <button class="sector-filter-btn" data-filter="manufacturing">Manufacturing</button>
+        </div>
 
-            <!-- Sleek Single Line Corporate Header Strip -->
-            <div class="executive-widescreen-header">
-                <h1>Muhammad Iqbal</h1>
-                <div class="horizontal-contact-strip">
-                    <a href="mailto:iqbal.fcca@gmail.com?subject=Executive%20Inquiry%20-%20Muhammad%20Iqbal">iqbal.fcca@gmail.com</a> &nbsp;|&nbsp; 
-                    <a href="tel:+971523123050">+971 52 312 3050</a> &nbsp;|&nbsp; 
-                    Dubai, UAE
+        <!-- Timeline Track -->
+        <div class="timeline-track">
+
+            <!-- Role 1: Financial Controller -->
+            <div class="timeline-node" data-filter="regulated">
+                <div class="timeline-dot active-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Financial Controller</p>
+                            <p class="company-name">Confidential <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Jan 2025 - Present</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Regulated</span>
+                            <span class="industry-badge">Fractional CFO</span>
+                            <span class="industry-badge">Tax Advisory</span>
+                            <p class="company-desc">Boutique UAE advisory firm serving DFSA/FSRA regulated investment entities, including Category 3C fund managers, and growth-stage enterprises. Dual practice: fractional CFO and tax advisory for SMEs, and regulated Finance Officer appointments for DIFC/ADGM investment firms.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>FRACTIONAL CFO & CAPITAL ADVISORY:</strong> Fractional CFO for UAE SMEs, delivering FP&A, financial modeling, feasibility studies, and due diligence packages for angel investor and bank submissions across multiple client engagements, structuring capital asks ranging AED 2M-10M per raise across fintech, payments, healthcare, and financial services.</li>
+                            <li><strong>REGULATED FINANCE OFFICER (DFSA/FSRA):</strong> Executes statutory Finance Officer mandates under DFSA and FSRA frameworks for Category 3C fund managers, directing capital adequacy, PIB/PRU reporting, and EPRS prudential filings. Segregated client monies and aligned IFRS reporting with DFSA/FSRA prudential rules alongside external auditors. Zero late penalties, unqualified audit opinions.</li>
+                            <li><strong>STATUTORY REPORTING & ESG ADVISORY:</strong> Prepared management accounts for external audit across multiple SME and regulated clients, submitted to DMCC, JAFZA, DIFC, ADGM, and DED authorities, delivering board-level reporting on financial performance and cash flow alongside ESG assessment, policy development, and audit readiness for UAE sustainability disclosure rules.</li>
+                            <li><strong>TAX STRUCTURING & CORPORATE ADVISORY:</strong> Structured QFZP compliance, CIGA, and transfer pricing for free zone entities, securing 0% corporate tax rate on qualifying income, and directed mainland corporate tax planning under the standard corporate tax framework.</li>
+                            <li><strong>AI, AUTOMATION & SYSTEMS:</strong> Deployed and configured Oracle NetSuite, Odoo, Zoho, Microsoft Dynamics, and FirstBit ERP systems for SME clients, leading adoption of AI-adjacent automation tooling, Make.com, Zapier, and UiPath, to build data pipelines and eliminate manual invoice creation, accounts payable, VAT tagging, credit control, and inventory processing.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Fixed Headline: Problem-first opening, reduced size for 2 lines -->
-            <h2 class="hero-pitch-title hero-pitch-compact">
-                I do not maintain finance functions. I build them. I build financial infrastructure that keeps the business compliant and controlled, and unlocks capital, liquidity, and profitability that would not exist otherwise.
-            </h2>
-
-            <!-- Section Header Box -->
-            <h2 class="section-header-line">Professional Summary</h2>
-
-            <!-- Summary Column Blocks -->
-            <div class="summary-columns-container">
-                <div class="summary-column-item">
-                    <strong>Strategic Mandate</strong>
-                    Most finance leaders either control the books or sit close to capital. I do both. I also build the infrastructure that connects the two — from multi-entity NetSuite deployments with HSBC bank integration to cash flow models feeding board-level decisions.
-                </div>
-                <div class="summary-column-item">
-                    <strong>Edge</strong>
-                    Eighteen years across regulated investment environments, venture-backed platforms, and multi-entity cross-border structures. DFSA DIFC and FSRA ADGM Finance Officer. Not sequential, concurrent. That overlap is uncommon.
-                </div>
-                <div class="summary-column-item">
-                    <strong>Execution</strong>
-                    I do not arrive to maintain what exists. I arrive to build what should exist and make sure it holds under pressure. From budget to treasury, I own the full P&L cycle and make it audit-ready.
-                </div>
-            </div>
-
-            <!-- REFINING 5-CARD LEDGER GRID WITH UPGRADED DESCRIPTORS -->
-            <div class="ledger-row-grid">
-                <div class="ledger-data-item" onclick="scrollToSection('cross-border')">
-                    <h3>$17.5M</h3>
-                    <p>Capital<br>Raised</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('regulated-governance')">
-                    <h3>Regulated</h3>
-                    <p>Finance<br>Officer</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('branch-economics')">
-                    <h3>AED 4.5M</h3> 
-                    <p>EBITDA<br>Improvement</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('cash-flow')">
-                    <h3>AED 3M</h3>
-                    <p>Operating<br>Liquidity</p>
-                </div>
-                <div class="ledger-data-item" onclick="scrollToSection('marketplace-infra')">
-                    <h3>Marketplace</h3> 
-                    <p>ERP<br>INFRASTRUCTURE</p> 
+            <!-- Role 2: Group Financial Controller -->
+            <div class="timeline-node" data-filter="healthcare">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Group Financial Controller</p>
+                            <p class="company-name">selfologi.com <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2021 - Nov 2024</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Healthcare</span>
+                            <span class="industry-badge">Marketplace</span>
+                            <span class="industry-badge">VC Backed</span>
+                            <p class="company-desc">Award-winning healthcare marketplace and the first DHA and DoH-licensed platform for cosmetic treatment discovery and booking in the UAE, backed by a USD 17.5M venture-backed seed round, operating across UAE, KSA, UK, and BVI.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>GROUP FINANCIAL STRATEGY & BOARD PARTNERSHIP:</strong> Directed group financial strategy with full ownership of financial, legal, and compliance infrastructure across UAE, KSA, UK, and BVI, partnering directly with the CEO and regional business unit heads to turn multi-currency financial data into strategic narratives that informed growth roadmaps and board-level capital allocation decisions.</li>
+                            <li><strong>INVESTOR RELATIONS & CAPITAL ADVISORY:</strong> Directed financial due diligence and managed the investor data room for the USD 17.5M seed round, preparing three-statement financial models and cap table scenarios; owned end-to-end investor relations post-raise, managing capital calls, cap table, and spend reporting for the board.</li>
+                            <li><strong>FP&A OWNERSHIP & REVENUE ARCHITECTURE:</strong> Built the FP&A function from scratch as founding finance hire, owning driver-based annual budgeting and rolling forecasts while engineering IFRS 15-compliant revenue recognition for a payment intermediary marketplace with tiered commission models and refund reserves; led weekly multi-scenario burn rate analysis and five-year financial models informing board-level strategic pivots.</li>
+                            <li><strong>REGULATORY LICENSING & MULTI-ENTITY GROUP STRUCTURE:</strong> Secured DMCC, ADGM, and KSA regulatory licenses and structured the group's legal and tax framework across multiple jurisdictions, covering tax registration, transfer pricing, and cross-border compliance, delivering consecutive group-wide unqualified audit opinions from pre-launch through scale.</li>
+                            <li><strong>SYSTEMS AND AUTOMATION:</strong> Deployed Oracle NetSuite as the group's multi-entity ERP infrastructure, integrating ecommerce systems, payment gateways, and HSBC banking APIs to automate reconciliation and cross-entity settlement across all jurisdictions.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- DETAIL SECTIONS -->
-            <div class="detail-sections-container">
-
-                <section id="cross-border" class="detail-section">
-                    <h3>Cross-Border Financial Architecture</h3>
-                    <p>Built the financial model, covering business model, valuation, and use-of-funds, and the multi-jurisdiction legal, tax, and banking architecture behind a USD 17.5M venture capital round; served as primary point of contact for investor reporting across assets, platform, payroll, and opex.</p>
-                </section>
-
-                <section id="regulated-governance" class="detail-section">
-                    <h3>Regulated Governance</h3>
-                    <p>Directed regulatory capital reporting, consolidated financials, and board governance for regulated investment entities across DIFC and ADGM under DFSA and FSRA frameworks, ensuring 100% compliance with capital adequacy mandates across USD 450M+ AUM. Zero regulatory penalties. Unqualified audit opinions.</p>
-                </section>
-
-                <section id="branch-economics" class="detail-section">
-                    <h3>Branch Network Economics</h3>
-                    <p>Delivered AED 4.5M EBITDA improvement across a ten-branch network by rationalising locations on a unit-economics basis, restructuring operating costs, and redeploying overhead into higher-margin channels.</p>
-                </section>
-
-                <section id="cash-flow" class="detail-section">
-                    <h3>Cash Flow Engineering</h3>
-                    <p>Unlocked AED 3M in operating liquidity within six months by restructuring procurement to unified 30-45 day trade credit terms, consolidating suppliers, and negotiating volume rebates.</p>
-                </section>
-
-                <section id="marketplace-infra" class="detail-section">
-                    <h3>Marketplace Financial Infrastructure</h3>
-                    <p>Built the finance infrastructure from the ground up for a live, multi-jurisdiction marketplace by deploying a multi-entity NetSuite system that integrated ecommerce, payables, receivables, tax treatment, and HSBC banking APIs, automating settlement, invoicing, and multi-currency reconciliation across four jurisdictions.</p>
-                </section>
-
-                <section id="currently-building" class="detail-section">
-                    <h3>What I Am Building Now</h3>
-                    <p>Automated resume tailoring systems with LLM chains (Groq, Gemini, Cerebras, OpenRouter) — 50+ score threshold with approval gates. AI-enabled finance operations. RPA and Anaplan deployment for real-time closing and scenario modeling. The CFO who wins in 2030 is building this infrastructure now.</p>
-                </section>
-
+            <!-- Role 3: Head of Finance -->
+            <div class="timeline-node" data-filter="hospitality">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Head of Finance</p>
+                            <p class="company-name">Majestic Hotels <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2018 - Aug 2021</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Hospitality</span>
+                            <span class="industry-badge">Retail</span>
+                            <span class="industry-badge">380 Rooms</span>
+                            <p class="company-desc">Multi-unit UAE hospitality and luxury retail group spanning 380 hotel rooms across two units and 12 retail stores, operating across Dubai and the Northern Emirates.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>FINANCE LEADERSHIP & GROUP OWNERSHIP:</strong> Led a 10-member finance team as Head of Finance, reporting directly to ownership with group treasury and disbursement approval authority, holding full accountability for financial strategy across hospitality and retail divisions.</li>
+                            <li><strong>FP&A & PERFORMANCE MANAGEMENT:</strong> Owned annual budgeting and rolling forecast cycles alongside an integrated performance assessment system establishing clear departmental P&L accountability across hospitality and retail divisions, driving targeted cost optimization that improved gross profit margins by 8% and contributed to an EBITDA-positive turnaround while reducing overhead allocation variances.</li>
+                            <li><strong>COVID RESTRUCTURING & CASH PRESERVATION:</strong> Restructured the hotel portfolio during COVID, analyzing vendor contracts and costs across rooms, F&B, and lease outlets to calculate true cost of vacancy and preserve cash flow and revenue through market recovery.</li>
+                            <li><strong>PROCUREMENT, LIQUIDITY & ERP CONSOLIDATION:</strong> Replaced a cash-plus-credit procurement model with negotiated supplier terms, securing credit lines to improve group liquidity, and consolidated fragmented inventory data across expanding retail locations into a single ERP system as the store portfolio grew from 10 to 12 locations.</li>
+                            <li><strong>ECOMMERCE LAUNCH & RETAIL RATIONALIZATION:</strong> Directed the group's first-ever ecommerce channel launch for the retail division, capturing 30% of total revenue within 6 months amid the post-COVID shift to digital retail, while executing strategic store rationalization to consolidate locations and maintain cash flow across Dubai and the Northern Emirates.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- Twin Modern Flat Action Buttons Row Layout -->
-            <div class="dual-action-row">
-                <a href="experience.html" class="btn-primary" target="_self">Explore Timeline</a>
-                <a href="https://www.linkedin.com/in/iqbal-acca/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+            <!-- Role 4: Head of Finance -->
+            <div class="timeline-node" data-filter="government">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Head of Finance</p>
+                            <p class="company-name">Tasheel <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Sep 2014 - Oct 2018</span>
+                            <span class="timeline-location">UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Government</span>
+                            <span class="industry-badge">Semi-Government</span>
+                            <span class="industry-badge">AED 2B+</span>
+                            <p class="company-desc">Licensed government service center operator, one of the private-sector partners authorized under MOHRE's Tasheel network, with full ownership of finance, treasury, and reporting across a 10-branch UAE network spanning MOHRE, MOH, DED, GDRFA, ICP, and MOF affiliations, processing AED 2B+ annually in government transaction collections via the G1 cash collection system.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>FINANCE LEADERSHIP & BOARD REPORTING:</strong> Headed the complete finance function, treasury, reporting, compliance, and M&A, for a 10-branch network processing AED 2B+ in annual government transaction collections, presenting monthly performance directly to the board and driving data-driven decisions on expansion, resource allocation, and site closures across 6 government agency affiliations.</li>
+                            <li><strong>FP&A & P&L TURNAROUND:</strong> Owned annual budgeting and rolling forecasts while diagnosing underperforming branches through cost-per-transaction and EBITDA analysis, restructuring loss-making units into profitable entities, and funding 3 new center expansions entirely from retained cash flows with zero external capital.</li>
+                            <li><strong>DEBT FINANCING & M&A ADVISORY:</strong> Led debt financing negotiations, securing an Islamic finance credit facility through direct engagement with financial institutions, and collaborated with the M&A Committee on financial due diligence and strategy for the acquisition of additional service centers.</li>
+                            <li><strong>TREASURY & HIGH-VOLUME CASH RECONCILIATION:</strong> Owned daily cash reconciliation for AED 2B+ in annual collections via the G1 government collection system across all centers, maintaining zero discrepancies in a high-volume, cash-intensive, multi-ministry environment.</li>
+                            <li><strong>REGULATORY COMPLIANCE & AUDIT PERFORMANCE:</strong> Navigated VAT uncertainty for newly introduced tax on semi-government service fees, engaging FTA, MOHRE, and MOH directly to determine compliance treatment, and delivered zero penalties and zero findings across ministry audits spanning MOHRE, MOH, and DED, preserving operational licenses network-wide.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </section>
+
+            <!-- Role 5: Group Finance Manager -->
+            <div class="timeline-node" data-filter="investment">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Group Finance Manager</p>
+                            <p class="company-name">aafaq Islamic Finance PSC <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Dec 2011 - Aug 2014</span>
+                            <span class="timeline-location">Dubai, UAE</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Investment</span>
+                            <span class="industry-badge">Sharia</span>
+                            <span class="industry-badge">8 Entities</span>
+                            <p class="company-desc">Private Joint Stock Company licensed by the Central Bank of the UAE as a Sharia-compliant Islamic finance house, with Board Risk and Compliance Committee (BRCC) and Board Audit Committee (BAC) governance, holding 8 portfolio companies across private equity, corporate finance, real estate, F&B, and SME financing.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>GROUP CONSOLIDATION & FINANCE LEADERSHIP:</strong> Led a 7-member finance team as Group Finance Manager, reporting to the Finance Director with consolidated results feeding Board Audit Committee (BAC) review, personally building the group-level consolidation framework across 8 portfolio companies on Oracle ERP that gave the board unified group visibility for the first time.</li>
+                            <li><strong>FINANCIAL CONTROLLERSHIP & FINANCIALS MONITORING:</strong> Personally monitored and verified portfolio company financials across all 8 entities, including budget and forecast tracking against actuals for external audit purposes, uncovering material discrepancies and hidden liabilities, surfacing off-balance-sheet exposures and related-party transactions the investment team had not identified, and blocking misstated valuations before they reached the board.</li>
+                            <li><strong>RISK MANAGEMENT & COVENANT MONITORING:</strong> Directed risk management across equity and loan agreements spanning the portfolio, with findings feeding Board Risk and Compliance Committee (BRCC) oversight, personally tracking covenant performance to catch early warning signals on underperforming positions ahead of default and drive recovery actions that protected invested capital.</li>
+                            <li><strong>AUDIT COORDINATION & CONTROLLERSHIP OVERSIGHT:</strong> Personally coordinated external audits across all 8 portfolio companies, scoping audit coverage around the highest-risk exposures and holding auditors directly accountable until every finding reached resolution ahead of Audit Committee sign-off.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role 6: Assistant Manager Finance -->
+            <div class="timeline-node" data-filter="manufacturing">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="card-header" onclick="toggleCard(this)">
+                        <div class="header-left">
+                            <p class="role-title">Assistant Manager Finance</p>
+                            <p class="company-name">DyStar <span class="fractional-tag">Full-time</span></p>
+                        </div>
+                        <div class="header-right">
+                            <span class="timeline-date">Feb 2007 - Sep 2011</span>
+                            <span class="timeline-location">Karachi, Pakistan</span>
+                            <span class="expand-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="card-detail">
+                        <div class="company-context">
+                            <span class="industry-badge">Manufacturing</span>
+                            <span class="industry-badge">Chemicals</span>
+                            <span class="industry-badge">B2B</span>
+                            <p class="company-desc">Subsidiary of DyStar GmbH, a global textile dyes and chemicals manufacturer tracing its heritage to Bayer, Hoechst, and BASF. Operated as an indenting house, toll manufacturer, and B2B retail distribution arm for textile mills across Pakistan.</p>
+                        </div>
+                        <ul class="experience-bullets">
+                            <li><strong>FINANCIAL REPORTING & QUALITY COMPLIANCE:</strong> Managed monthly financial reporting, CAPEX tracking, and payment approvals across indenting, toll manufacturing, and retail operations in SAP; served as DyStar Pakistan's Quality Management auditor, aligning local compliance with Frankfurt headquarters group standards.</li>
+                            <li><strong>TRADE FINANCE & TREASURY OPERATIONS:</strong> Structured and executed import letters of credit for chemical shipments from Singapore and Germany, managing trade finance documentation, forex exposure, and banking relationships across a 60/20/20 revenue mix of indenting, toll manufacturing, and retail.</li>
+                            <li><strong>COST ACCOUNTING & MARGIN PROTECTION:</strong> Directed cost accounting and inventory valuation for toll manufacturing cycles, performing variance analysis against standard costs to control COGS and protect margins in volatile raw material markets.</li>
+                            <li><strong>AUDIT & REGULATORY COMPLIANCE:</strong> Coordinated with external auditors and tax authorities for statutory compliance, preparing audit schedules and reconciliations that delivered clean sign-offs with zero qualifications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Action -->
+        <div class="timeline-footer-action">
+            <a href="index.html" class="btn-primary" target="_self">Back to Home</a>
+        </div>
 
     </main>
 
     <script>
-        function scrollToSection(id) {
-            const target = document.getElementById(id);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                target.classList.add('highlight-pulse');
-                setTimeout(() => target.classList.remove('highlight-pulse'), 1500);
+        function toggleCard(header) {
+            const card = header.closest('.timeline-card');
+            const detail = card.querySelector('.card-detail');
+            const icon = header.querySelector('.expand-icon');
+
+            if (card.classList.contains('expanded')) {
+                card.classList.remove('expanded');
+                detail.style.maxHeight = null;
+                detail.style.opacity = '0';
+                icon.style.transform = 'translateY(-50%) rotate(0deg)';
+                icon.textContent = '+';
+            } else {
+                // Close others
+                document.querySelectorAll('.timeline-card.expanded').forEach(c => {
+                    c.classList.remove('expanded');
+                    c.querySelector('.card-detail').style.maxHeight = null;
+                    c.querySelector('.card-detail').style.opacity = '0';
+                    c.querySelector('.expand-icon').style.transform = 'translateY(-50%) rotate(0deg)';
+                    c.querySelector('.expand-icon').textContent = '+';
+                });
+
+                card.classList.add('expanded');
+                detail.style.maxHeight = detail.scrollHeight + 'px';
+                detail.style.opacity = '1';
+                icon.style.transform = 'translateY(-50%) rotate(45deg)';
+                icon.textContent = '−';
             }
         }
+
+        // Sector Filter
+        document.querySelectorAll('.sector-filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.sector-filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+                document.querySelectorAll('.timeline-node').forEach(node => {
+                    if (filter === 'all' || node.dataset.filter === filter) {
+                        node.style.display = 'block';
+                        node.style.opacity = '1';
+                    } else {
+                        node.style.display = 'none';
+                        node.style.opacity = '0';
+                    }
+                });
+            });
+        });
     </script>
 
 </body>
